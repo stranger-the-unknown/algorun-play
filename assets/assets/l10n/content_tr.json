@@ -1,0 +1,1396 @@
+{
+  "language": "tr",
+  "worlds": {
+    "world_01": "Temeller",
+    "world_02": "Diziler",
+    "world_03": "Eşlemeler",
+    "world_04": "İki İşaretçi",
+    "world_05": "Kayan Pencere",
+    "world_06": "Yığın ve Kuyruk",
+    "world_07": "Bağlı Listeler",
+    "world_08": "Ağaçlar",
+    "world_09": "Öbekler (Heap)",
+    "world_10": "Çizgeler",
+    "world_11": "Açgözlü Yöntemler",
+    "world_12": "Özyineleme ve Geri İzleme",
+    "world_13": "Dinamik Programlama",
+    "world_14": "İleri Algoritmalar"
+  },
+  "concepts": {
+    "variables": "değişkenler",
+    "control": "kontrol akışı",
+    "arrays": "diziler",
+    "prefix_sum": "önek toplamları",
+    "binary_search": "ikili arama",
+    "binary_search_answer": "cevap üzerinde ikili arama",
+    "hash_map": "eşlemeler",
+    "hash_set": "kümeler",
+    "complement_lookup": "tümleyen arama",
+    "counting": "sayma",
+    "two_pointers": "iki işaretçi",
+    "sliding_window": "kayan pencere",
+    "stack": "yığın",
+    "queue": "kuyruk",
+    "monotonic_stack": "monoton yığın",
+    "linked_list": "bağlı liste",
+    "fast_slow_pointers": "hızlı ve yavaş işaretçi",
+    "relinking": "yeniden bağlama",
+    "tree": "ağaç",
+    "bst": "ikili arama ağacı",
+    "heap": "öbek (heap)",
+    "graph": "çizge",
+    "bfs": "genişlik öncelikli arama",
+    "dfs": "derinlik öncelikli arama",
+    "shortest_path": "en kısa yol",
+    "topological_order": "topolojik sıra",
+    "greedy": "açgözlü seçim",
+    "greedy_choice": "açgözlü seçim",
+    "backtracking": "geri izleme",
+    "recursion": "özyineleme",
+    "dp": "dinamik programlama",
+    "multi_concept": "birleşik kavramlar"
+  },
+  "puzzles": {
+    "warm_readings": {
+      "title": "Sıcak Ölçümler",
+      "story": "Bir sera sensörü sıcaklık ölçümlerini art arda kaydediyor. Bahçıvan, konfor sınırından kesinlikle daha sıcak olan kaç ölçüm olduğunu öğrenmek istiyor. Tam sınırda olan bir ölçüm hâlâ konforlu sayılır.",
+      "hints": [
+        "Ölçümleri tek tek dolaş ve 0'dan başlayan bir sayaç tut.",
+        "Sayaca yalnızca sınırın kesinlikle üstündeki bir ölçüm eklenir; bunu hangi karşılaştırmanın söylediğine karar ver.",
+        "Sınıra eşit bir ölçüm sayılmamalı; boş bir kayıt 0 döndürür."
+      ]
+    },
+    "highest_tide": {
+      "title": "En Yüksek Gelgit",
+      "story": "Bir liman göstergesi gün boyunca belirli aralıklarla gelgiti ölçüyor. En yüksek ölçümün konumunu (0'dan sayarak) bildir. En yüksek seviyeye birden fazla kez ulaşıldıysa liman en erken zamanı istiyor. Hiç ölçüm yoksa -1 bildir.",
+      "hints": [
+        "Şimdiye kadar görülen en iyi ölçümün konumunu tut ve her yeni ölçümü onunla karşılaştır.",
+        "Henüz hiçbir şey görülmeden bir en iyi yoktur; bunu -1 temsil edebilir ve boş bir günün cevabı da budur.",
+        "En iyiyi yalnızca bir ölçüm kesinlikle daha yüksekse değiştir; böylece eşit en yüksekler arasında en erkeni kalır."
+      ]
+    },
+    "lowest_balance": {
+      "title": "En Düşük Bakiye",
+      "story": "Ortak bir hesap aya 0 ile başlıyor. Her yatırma pozitif, her çekme negatif bir sayı; hepsi gerçekleştikleri sırayla listeleniyor. Başlangıçtaki 0 dahil, hesabın gösterdiği en düşük bakiye neydi?",
+      "hints": [
+        "Her işlemden sonraki bakiye, önceki bakiye artı değişimdir.",
+        "Süregelen bakiyenin yanında şimdiye kadar görülen en düşük bakiyeyi tut.",
+        "Ay 0 ile başlar ve bu başlangıç da sayılır: yalnızca yatırma olan bir ayın en düşük bakiyesi 0'dır."
+      ]
+    },
+    "shelf_totals": {
+      "title": "Raf Toplamları",
+      "story": "Bir depo koridoru bir sıra raftan oluşuyor; her rafta bir miktar ürün var (hasarlı ürün rafı negatif sayılır). Görevliler 'a rafından b rafına kadar, ikisi de dahil, kaç ürün var?' biçiminde çok sayıda soru soruyor. k. soru starts[k]'den ends[k]'ye kadar gider. Her soruyu sırayla cevapla. Koridor uzun, sorular bitmiyor ve depo bilgisayarı her adımı sayıyor.",
+      "hints": [
+        "Her soru için rafları yeniden toplamak doğrudur, ama uzun bir koridorda uzun sorular çok fazla adım tutar.",
+        "Koridoru bir kez dolaş ve her raftan önceki süregelen toplamı yaz: ilk 0 rafın toplamı, ilk 1 rafın, ilk 2 rafın ve böyle devam.",
+        "a rafından b rafına kadarki ürünler, b'ye kadarki süregelen toplam eksi a'dan önceki süregelen toplamdır. Listenin başında 0 varken bu list[b + 1] - list[a] olur."
+      ]
+    },
+    "departure_board": {
+      "title": "Kalkış Panosu",
+      "story": "Bir istasyonun kalkış panosu günün trenlerini kalkış dakikasına göre, en erken olan başta olmak üzere listeliyor; aynı dakikada birden fazla tren kalkabilir. Bir yolcu t dakikasında geliyor ve t'de ya da daha sonra kalkan herhangi bir trene binebilir. Hâlâ yetişebileceği ilk trenin konumunu (0'dan sayarak) bildir. Tüm trenler kalktıysa tren sayısını bildir. Pano uzun ve bilet makinesi yalnızca birkaç yüz adım atabilir.",
+      "hints": [
+        "Panoyu yeterince geç bir tren bulana kadar yukarıdan okumak işe yarar, ama geç gelen bir yolcu için uzun bir pano binlerce adım tutar.",
+        "Pano sıralı, yani ortadaki bir trene bakmak panonun yarısını bir anda eler.",
+        "Bir alt ve bir üst konum tut. Ortadaki tren t'den önce kalkıyorsa cevap ondan sonradır; değilse ortadaki trenin kendisi cevap olabilir. Aynı dakikadaki trenler: ilkinde durduğundan emin ol."
+      ]
+    },
+    "smallest_cart": {
+      "title": "En Küçük Araba",
+      "story": "Koliler depodan sabit bir sırayla bir bantla çıkıyor; her birinin tam sayı bir ağırlığı var. Tek bir araba onları seferlerle taşıyor. Her seferde araba sıradaki kolileri toplam ağırlıkları kapasitesine sığdığı sürece alır, sonra yola çıkar; koliler asla yeniden sıralanmaz ya da bölünmez. En fazla verilen sayıda sefer yapabilirsin. Tüm bandı zamanında boşaltan en küçük tam sayı kapasite nedir?",
+      "hints": [
+        "Bir kapasite bandı zamanında boşaltıyorsa ondan büyük her kapasite de boşaltır. Cevap, 'çok küçük'ün 'yeterince büyük'e dönüştüğü noktadadır.",
+        "Cevap en az en ağır koli, en fazla toplam ağırlıktır. Tek bir kapasiteyi, bandı bir kez dolaşıp seferleri sayarak deneyebilirsin.",
+        "Bir alt ve bir üst sınır tut ve aralarındaki orta kapasiteyi dene. Kapasiteler tam sayı, yani orta nokta da tam sayı olmalı. Denemenin elediği sınırı kaydır ve sınırlar buluşunca dur."
+      ]
+    },
+    "loudest_echo": {
+      "title": "En Güçlü Yankı",
+      "story": "Bir mağaradaki yarasalar birbirlerine seslerle cevap veriyor; her ses bir sayı. Bu gece en sık duyulan ses hangisiydi? Birkaç ses en yüksek sayıyı paylaşıyorsa en küçüğünü bildir. Her zaman en az bir ses vardır.",
+      "hints": [
+        "Her sesi şimdiye kadar kaç kez duyulduğuna eşleyen bir eşleme (map) tut.",
+        "Bir sesi eşlemede aramak ilk seferde NOTHING verebilir; bir eklemeden önce IS NOTHING ile kontrol et.",
+        "İlerlerken en iyi sesi ve sayısını tut. Aynı sayıya sahip sonraki bir ses ancak daha küçükse kazanır."
+      ]
+    },
+    "twin_beacons": {
+      "title": "İkiz Fenerler",
+      "story": "Limanın fenerleri güçlerini art arda bildiriyor. İki fenerin güçleri toplamı tam olarak ayar sayısına eşitse rezonansa girerler; bir fener asla kendisiyle rezonansa giremez. Liman amiri, kendisinden önce kaydedilmiş herhangi bir fenerle rezonanslı bir çift tamamlayan ilk fenerin konumunu (0'dan sayarak) istiyor. Hiçbir fener bunu yapmazsa -1 bildir. Kayıt uzun olabilir ve liman bilgisayarı her adımı sayıyor.",
+      "hints": [
+        "Her fener çiftini karşılaştırmak doğru cevabı verir, ama uzun kayıtlarda çok yavaştır. Kaydı yalnızca bir kez dolaşmayı dene.",
+        "Bir fenerde, onunla çift tamamlayabilecek tek bir güç vardır: ayar sayısı eksi kendi gücü. Geçtiğin güçlerden bir küme tut.",
+        "Her konumda önce kümeye eksik gücün zaten orada olup olmadığını sor; varsa o konum cevabındır. Bu fenerin gücünü ancak sorduktan sonra ekle. Bu iki adımın sırası önemlidir."
+      ]
+    },
+    "level_stretches": {
+      "title": "Denk Bölümler",
+      "story": "Bir yürüyüşçünün saati her adımda kaç metre tırmanıldığını (pozitif) ya da inildiğini (negatif) kaydediyor. Bir bölüm, ardışık adımlardan oluşan herhangi bir dizidir. Toplam değişimi tam olarak hedef olan kaç bölüm var? Farklı bölümler üst üste binebilir. Uzun yürüyüşleri, her bölümü denemeye gücü yetmeyen bir saat sayıyor.",
+      "hints": [
+        "Her başlangıcı ve her bitişi denemek işe yarar, ama uzun bir yürüyüşte milyonlarca bölüm vardır.",
+        "Baştan itibaren süregelen toplamı tut. Burada biten bir bölümün toplamı tam olarak hedeftir, ancak ve ancak daha önceki bir süregelen toplam şu ankinin hedef eksiği ise.",
+        "Her süregelen toplamın kaç kez göründüğünü say; ilk adımdan önce 0 bir kez görülmüş olarak başla. Bir arama NOTHING olabilir, kullanmadan önce kontrol et."
+      ]
+    },
+    "longest_streak": {
+      "title": "En Uzun Seri",
+      "story": "Numaralı jetonlardan oluşan bir kutu belirli bir sıra olmadan geliyor; bazı sayılar birden fazla kez var. Bir seri, aralarında boşluk olmadan birbirini izleyen sayılardır, örneğin 4, 5, 6, 7. Kutudaki sayılardan yapabileceğin en uzun seri ne kadar uzun? Tekrarlanan sayılar bir seriyi uzatmaz. Büyük bir kutu hızlıca kontrol edilmeli.",
+      "hints": [
+        "Her sayıyı bir kümeye koy; böylece '7 kutuda mı?' diye sormak tek adım tutar.",
+        "Her sayıdan yukarı doğru yürümek her seriyi bulur, ama uzun bir seri o zaman her üyesinden yeniden yürünür.",
+        "Yalnızca bir önceki sayısı kutuda olmayan bir sayıdan yürümeye başla: o, serisinin ilkidir."
+      ]
+    },
+    "matched_pair": {
+      "title": "Eşleşen Çift",
+      "story": "Bir ağırlık rafı hafiften ağıra sıralı; karşı ağırlıklar için terazi negatif gösteriyor. Rafta toplamı tam olarak hedefe eşit iki farklı ağırlıktan oluşan bir çift var mı? Terazinin bilgisayarının neredeyse hiç belleği yok: gördüğü ağırlıkları not edemez.",
+      "hints": [
+        "Her ağırlığı bir kümede hatırlamak işe yarardı, ama bu terazi yalnızca bir avuç bellek hücresi tutabiliyor.",
+        "En hafif ve en ağır ağırlığa birlikte bak. Çok hafiflerse, ikisinden hangisi asla bir cevabın parçası olamaz?",
+        "Her seferinde bir ucu içeri kaydır: çok hafifse hafif ucu yukarı, çok ağırsa ağır ucu aşağı kaydır ve iki uç buluşunca dur."
+      ]
+    },
+    "widest_basin": {
+      "title": "En Geniş Havza",
+      "story": "Deniz duvarları kıyı boyunca bir metre arayla bir sıra hâlinde duruyor; her birinin bir yüksekliği var. Herhangi iki duvar seç: aralarında tutabilecekleri su, alçak olan duvar kadar yüksek ve aralarındaki mesafe kadar geniştir. İki duvarın tutabileceği en fazla su nedir? Her çifti karşılaştırmak cevabı verir, ama liman uzun bir kıyıda bunu en az on kat daha hızlı istiyor.",
+      "hints": [
+        "Her duvar çifti bir aday ve yaklaşık n*n/2 çift var. Uzun kıyı çok daha az adım gerektiriyor.",
+        "En dıştaki iki duvarla başla: en geniş havza. Daha dar her havza kazanmak için daha yüksek olmalı.",
+        "İki duvardan alçak olanı suyu sınırlar ve yüksek duvarı içeri kaydırmak asla işe yaramaz. Alçak duvarı içeri kaydır ve şimdiye kadarki en iyi havzayı hatırla."
+      ]
+    },
+    "rush_hour": {
+      "title": "Yoğun Saat",
+      "story": "Turnikeler günün her dakikasında kaç yolcunun geçtiğini sayıyor. İstasyon müdürü tam olarak k ardışık dakikalık en yoğun bölümü istiyor: o bölümde kaç yolcu geçtiğini bildir. Uzun bir gün ve uzun bir bölüm bütçe içinde sayılmalı.",
+      "hints": [
+        "Her olası bölüm için k dakikayı yeniden toplamak doğrudur, ama uzun bir günde uzun bir bölüm için çok yavaştır.",
+        "Komşu iki bölüm, iki dakika dışında her şeyi paylaşır.",
+        "İlk k dakikayı bir kez topla. Sağa doğru her adım, giren dakikayı ekler ve çıkanı çıkarır."
+      ]
+    },
+    "patchy_signal": {
+      "title": "Kesik Sinyal",
+      "story": "Bir radyo kaydı her saniyeyi sinyal netse 1, kesildiyse 0 olarak işaretliyor. Bir mühendis en fazla k kesintiyi yamayabilir. Yamadan sonra elde edebileceği en uzun net saniye dizisi ne kadar? Uzun kayıtlar adım bütçesi içinde kontrol edilmeli.",
+      "hints": [
+        "Her saniyede yeni bir sayım başlatmak işe yarar, ama çoğunlukla net bir kayıtta her sayım neredeyse sona kadar gider.",
+        "Sol ve sağ kenarı olan bir pencere tut ve içindeki kesintileri say.",
+        "Pencereyi her seferinde bir saniye sağa büyüt. İçinde k'den fazla kesinti olduğunda, yeniden k tane olana kadar sol kenarı sağa kaydır. En iyi pencere cevaptır."
+      ]
+    },
+    "quota_hours": {
+      "title": "Kota Saatleri",
+      "story": "Bir güneş tarlası günün her saatinde ne kadar enerji ürettiğini kaydediyor; her zaman en az bir birim. Şebeke, toplamı kotaya ulaşan kesintisiz bir saat dizisine ihtiyaç duyuyor. Böyle en kısa dizinin uzunluğunu bildir. Günün tamamı bile yetmiyorsa 0 bildir.",
+      "hints": [
+        "Her saat dizisinin bir ilk ve bir son saati vardır. Bunların her çiftini denemek işe yarar, ama uzun günlerde yavaştır.",
+        "Sol ve sağ kenarı olan bir pencere ve içindeki süregelen toplamı tut. Sağ kenarı her seferinde bir saat ilerlet.",
+        "Toplam kotaya ulaştığında pencere bir adaydır: uzunluğunu kaydet, sonra soldan daralt ve yeniden kontrol et. Hiçbir pencere kotaya ulaşmazsa ne bildireceğine karar ver."
+      ]
+    },
+    "market_variety": {
+      "title": "Pazar Çeşitliliği",
+      "story": "Bir pazar sokağı boyunca tezgâhlar dizili; her biri bir sayıyla yazılan tek bir çeşit ürün satıyor. Küçük sepetli bir alışverişçi en fazla k farklı çeşit taşıyabilir. Ürünleri bu kurala uyan en uzun kesintisiz tezgâh dizisi hangisi? Uzun sokaklar bütçe içinde kontrol edilmeli.",
+      "hints": [
+        "Her tezgâhta baştan başlayıp yeni bir çeşit kuralı bozana kadar yürümek doğrudur, ama az çeşitli uzun bir sokak her yürüyüşü uzatır.",
+        "Bir pencere ve içindeki her çeşidi penceredeki tezgâh sayısına eşleyen bir eşleme tut.",
+        "Pencereyi sağa büyüt. Eşlemede k'den fazla çeşit olduğu sürece en soldaki tezgâhı çıkar: sayısını azalt ve sayısı sıfıra inince çeşidi kaldır."
+      ]
+    },
+    "sealed_crates": {
+      "title": "Mühürlü Sandıklar",
+      "story": "Bir sevkiyat alanında sandıklar iç içe yerleştiriliyor. Paketleme kaydı her işlemi listeliyor: pozitif bir k sayısı k türünde bir sandık açar, -k ise hâlâ açık olan en son açılmış sandığı mühürler ve bu sandık k türünde olmalıdır. Kayıt doğru bir paketleme mi; her sandık doğru sırayla mühürlenmiş ve açık bir şey kalmamış mı?",
+      "hints": [
+        "Sıradaki mühürlenecek sandık yalnızca en son açılan sandık olabilir.",
+        "Açık sandıkları bir yığında tut. Açmak yığına koyar (PUSH); mühürlemek en üstteki türle eşleşmelidir.",
+        "Hiçbir şey açık değilken mühürlemek yanlıştır, sonda açık kalan bir sandık da öyle. Açma ve mühürleri saymak yetmez: türler önemlidir."
+      ]
+    },
+    "undo_button": {
+      "title": "Geri Al Tuşu",
+      "story": "Bir not uygulaması bir notu, içindeki kelimelerin uzunluklarını toplayarak puanlıyor. Kayıttaki her işlem ya pozitif bir sayıdır, yani sona o uzunlukta bir kelime yazmak, ya da 0'dır, yani notta hâlâ duran en son kelimeyi silen GERİ AL tuşuna basmak. Boş bir notta GERİ AL'a basmak hiçbir şey yapmaz. Son işlemden sonra notun puanı nedir?",
+      "hints": [
+        "GERİ AL her zaman hâlâ orada olan en son kelimeyi siler; yani kelimeler bir yığın gibi davranır.",
+        "Süregelen bir puan tut: bir kelime yazıldığında ekle, GERİ AL'ın geri aldığı kelimeyi çıkar.",
+        "Bir kelimeyi geri almadan önce bir kelime olduğundan emin ol. Boş bir notta GERİ AL hiçbir şeyi değiştirmemeli."
+      ]
+    },
+    "relay_towers": {
+      "title": "Röle Kuleleri",
+      "story": "Radyo kuleleri bir sırt boyunca bir sıra hâlinde duruyor; batıdan doğuya yükseklikleriyle listeleniyor. Her kule sinyalini doğuda kendisinden kesinlikle daha yüksek olan en yakın kuleye iletiyor. Her kule için o kulenin kaç konum doğuda olduğunu bildir. Doğusunda daha yüksek bir şey olmayan bir kule 0 bildirir.",
+      "hints": [
+        "Her kuleden daha yüksek bir şey görünene kadar doğuya bakmak doğrudur, ama giderek alçalan uzun bir sırtta neredeyse tüm işini tekrarlar.",
+        "Batıdan doğuya bir kez yürü. Hâlâ daha yüksek bir komşu bekleyen kuleleri tut ve onları yükseklikle değil konumla hatırla.",
+        "Yeni bir kule geldiğinde, ondan daha alçak bekleyen her kule cevabını bulmuş olur ve bunlar her zaman en son eklenenlerdir. Yeni kule ancak onları çözdükten sonra beklemeye başlar."
+      ]
+    },
+    "largest_billboard": {
+      "title": "En Büyük Reklam Panosu",
+      "story": "Bir sokak boyunca binalar yan yana duruyor; her biri bir metre genişliğinde ve yükseklikleriyle listeleniyor. Bir reklamcı komşu binaların önlerine tek bir dikdörtgen pano boyamak istiyor; pano kapladığı en alçak binadan daha yüksek olamaz. Böyle bir panonun alanı en fazla ne olabilir? Uzun bir sokak bütçe içinde ölçülmeli.",
+      "hints": [
+        "Her bina için, o bina kadar yüksek en iyi pano daha alçak bir binaya kadar sola ve sağa yayılır. Bu sınırları adım adım bulmak uzun ve düz bir sokakta çok yavaştır.",
+        "Soldan sağa yürürken yükseklikleri yalnızca artan konumlardan bir yığın tut. Yığının tepesinden daha alçak bir bina, üzerindeki daha yüksek binaların panolarını bitirir.",
+        "Bir konum yığından çıktığında, panosu yığının yeni tepesinin hemen sonrasından mevcut konumun hemen öncesine kadar uzanır. Sonuncudan sonra 0 yüksekliğinde hayalî bir bina yığını boşaltır."
+      ]
+    },
+    "middle_car": {
+      "title": "Ortadaki Vagon",
+      "story": "Bir tren vagonlardan oluşan bir zincirdir; her vagon yalnızca arkasındaki vagonu bilir. Ortadaki vagonun üzerine boyanmış sayıyı bildir. Trenin vagon sayısı çiftse iki ortadaki vagon vardır: daha arkada olanı bildir. Vagonları saymak ve yeniden yürümek işe yarar, ama iki işaretçi onu tek bir yürüyüşte bulabilir.",
+      "hints": [
+        "Sona kadar yürümek, yeniden yürüyene kadar sana ortayla ilgili hiçbir şey söylemez; iki işaretçi bunu tek yürüyüşte yapabilir.",
+        "Bir işaretçiyi her seferinde iki vagon, diğerini bir vagon ilerlet. Hızlı olan trenin sonuna varınca yavaş olan ortadadır.",
+        "Sonraki vagon NOTHING olabilir: adım atmadan önce IS NOT NOTHING ile kontrol et. Çift sayıda vagonda yavaş işaretçinin daha arkadaki vagonda durduğundan emin ol."
+      ]
+    },
+    "reverse_train": {
+      "title": "Treni Ters Çevir",
+      "story": "Bir tren depodan geldiği şekilde çıkmalı: son vagon ilk olur. Vagonlar kopyalanamaz ya da yeniden yapılamaz, yalnızca yeniden bağlanabilir: her vagonun hangi vagonu gösterdiğini değiştir. Yeni öndeki vagonu, boş bir hat için NOTHING döndür.",
+      "hints": [
+        "Treni bir kez dolaş. Her vagon sonunda önündeki vagonu göstermelidir.",
+        "Bir vagonu yeniden bağlamadan önce arkasındaki vagonu hatırla, yoksa trenin geri kalanı kaybolur.",
+        "Üç ad tut: şimdiye kadar ters çevrilmiş kısım, mevcut vagon ve ondan sonraki vagon. Ters çevrilmiş kısım NOTHING olarak başlar."
+      ]
+    },
+    "drop_faulty_cars": {
+      "title": "Arızalı Vagonları Çıkar",
+      "story": "Müfettişler belirli bir seri numarasını taşıyan her vagonun arızalı olduğunu buldu. Hepsini trenden ayır, diğer vagonları sıralarını koruyarak tut ve yeni öndeki vagonu döndür; hiç vagon kalmazsa NOTHING döndür. Arızalı vagonlar her yerde olabilir, hatta önde ve art arda birkaç tane.",
+      "hints": [
+        "Öndeki arızalı vagonların önünde bir vagon yoktur: önce baş vagonu onları geçecek şekilde ilerlet.",
+        "Geri kalanlar için bir vagon ileriye bak. Sonraki vagon arızalıysa mevcut vagonu ondan sonraki vagona bağla.",
+        "Arızalı bir vagonu atladıktan sonra, ilerlemeden önce yeni sonraki vagona bak: arızalı vagonlar art arda gelebilir. Sonraki vagon NOTHING olabilir, önce kontrol et."
+      ]
+    },
+    "loop_detector": {
+      "title": "Döngü Dedektörü",
+      "story": "Minyatür bir demiryolu, her biri bir sonrakini gösteren ray parçalarından oluşan bir zincir. Dikkatsiz bir yapımcı son parçayı daha önceki bir parçaya yöneltmiş olabilir; bu, treni sonsuza dek döndürür (mutlaka başlangıca dönmesi gerekmez). Hatta bir döngü var mı? Kontrol kutusunun gördüğü parçaları işaretleyecek belleği yok ve parçalardaki numaralar tekrar ediyor.",
+      "hints": [
+        "Hat bitene kadar yürümek döngülü bir hatta hiç bitmez; ilk parçanın yeniden gelmesini beklemek ise döngü daha sonra başladığında başarısız olur.",
+        "Hat boyunca iki işaretçi gönder: biri her adımda iki parça, diğeri bir parça ilerlesin.",
+        "Düz bir hatta hızlı işaretçi NOTHING'e ulaşır. Döngülü bir hatta hızlı işaretçi yavaş olana tur bindirir: aynı parçaya gelirler."
+      ]
+    },
+    "canopy_height": {
+      "title": "Taç Yüksekliği",
+      "story": "Bir botanikçi bir ağacı dal dal haritalıyor: her dallanma noktasının en fazla bir sol ve bir sağ dalı var. Gövdeyi 1. seviye sayarak ağacın kaç seviyesi var? Boş bir arsanın 0 seviyesi vardır. En yüksek kısım her iki tarafta da olabilir.",
+      "hints": [
+        "Ağacın bir tarafını aşağı doğru izlemek bir yükseklik bulur, ama en yüksek kısım diğer tarafta olabilir.",
+        "Dalları bir kuyrukla seviye seviye, turlar hâlinde ziyaret et. Her dalın seviyesini ikinci bir kuyrukta yanında tut.",
+        "Bir çocuk ancak LEFT ya da RIGHT, IS NOT NOTHING ise vardır. Cevap, kuyruktan çıkardığın en büyük seviyedir."
+      ]
+    },
+    "widest_level": {
+      "title": "En Kalabalık Seviye",
+      "story": "Bir ofis kulesinin organizasyon şeması bir ağaçtır: müdür 1. seviyede ve herkesin en fazla iki doğrudan çalışanı var. En çok kişi hangi seviyede? Birkaç seviye eşitse en üste en yakın olanı bildir.",
+      "hints": [
+        "Şemayı bir kuyrukla seviye seviye dolaş ve her kişinin seviyesini yanında tut.",
+        "Her seviye için bir sayaç olan bir liste tut; bir seviye ilk kez göründüğünde onun için bir sayaç ekle.",
+        "Sonra en büyük sayaca sahip seviyeyi bul. En iyiyi yalnızca kesinlikle daha büyük bir sayaç değiştirir; böylece eşit iki seviyeden daha yukarıdaki kalır."
+      ]
+    },
+    "trail_sum": {
+      "title": "Patika Toplamı",
+      "story": "Yürüyüş patikaları patika başından bir ağaç gibi dallanıyor. Her kavşak ve her patikanın sonu bir puanla işaretli ve bazı işaretler negatif. Tam bir patika, patika başından hiçbir şeyin dallanmadığı bir çıkmaza kadar uzanır. İşaretleri toplamı tam olarak hedefe eşit olan tam bir patika var mı? Yarıda durmak sayılmaz.",
+      "hints": [
+        "Ağacı bir yığınla dolaş ve her kavşağın yanında o ana kadarki patika toplamını ikinci bir yığında taşı.",
+        "Negatif işaretler, bir toplam çok büyüdü diye erken duramayacağın anlamına gelir.",
+        "Bir patikayı yalnızca bir çıkmaz (LEFT ve RIGHT yok) bitirebilir. Süregelen toplamı hedefe ulaşan bir kavşak tek başına bir cevap değildir."
+      ]
+    },
+    "sorted_grove": {
+      "title": "Düzenli Koru",
+      "story": "Bakımlı bir koruda her ağaç etiketi tek bir kurala uyar: bir ağacın sol tarafındaki her şey ondan kesinlikle küçük, sağ tarafındaki her şey kesinlikle büyük etiketlidir; yalnızca kendi iki dalı değil, altlarındaki her etiket. Bu koru bakımlı mı?",
+      "hints": [
+        "Her ağacı yalnızca kendi iki dalıyla karşılaştırmak yetmez: solda derinlerdeki bir etiket, daha yukarıdaki bir ağaçtan büyük olabilir.",
+        "Bakımlı bir koruyu önce sol taraf, sonra ağaç, sonra sağ taraf şeklinde okumak etiketleri kesinlikle artan sırada verir.",
+        "Bu okumayı bir yığınla yap: ağaçları yığına koyarak olabildiğince sola git, birini çıkar, önceki etiketle karşılaştır, sonra onun sağ dalından devam et."
+      ]
+    },
+    "island_count": {
+      "title": "Ada Sayısı",
+      "story": "Bir keşif uçağı bir takımadayı haritalıyor: numaralı kara parçaları ve hangi parçaların birbirine değdiği (değmek iki yönlüdür). Doğrudan ya da başka parçalar üzerinden bağlı parçalar tek bir ada oluşturur. Kaç ada var?",
+      "hints": [
+        "Bir parçadan başlayıp ulaşabildiğin her şeyi işaretlemek bütün bir adayı bulur.",
+        "Her parçayı sırayla dene; henüz işaretlenmemiş bir parça yeni bir adaya aittir.",
+        "Her yeni ada, ilk parçasından başlayan bir arama daha demektir; ilerlerken işaretle ki hiçbir parça iki kez aranmasın."
+      ]
+    },
+    "fewest_rides": {
+      "title": "En Az Yolculuk",
+      "story": "Bir şehrin raylı sistem haritası her istasyon için tek bir doğrudan yolculukla ulaşılabilen istasyonları listeliyor. Bazı yolculuklar tek yönlü, bazı hatlar kendi üzerine dönüyor ve bazı istasyonlar geri kalanından kopuk. İstasyonlar 0'dan numaralanıyor. Bir istasyondan başlayarak hedefe varmak için gereken en az yolculuk sayısı nedir? Olduğun yerde kalmak 0 yolculuktur. Hedefe hiç ulaşılamıyorsa -1 bildir.",
+      "hints": [
+        "Başlangıçtan herhangi bir sırayla yolculukları izlemek bir yol bulur, ama mutlaka en kısasını değil.",
+        "Turlar hâlinde keşfet: önce bir yolculuk uzaktaki her istasyon, sonra iki yolculuk uzaktakiler ve böyle devam. Bir kuyruk istasyonları keşfettiğin sırayla tutar.",
+        "Her istasyonun yolculuk sayısını ilk keşfettiğinde, ondan ulaştığın istasyonunkinden bir fazla olarak kaydet ve sonra asla değiştirme. Hiç keşfedilmeyen bir istasyonun ne bildireceğine karar ver."
+      ]
+    },
+    "two_teams": {
+      "title": "İki Takım",
+      "story": "Bir kulüp oyuncularını iki takıma ayırmalı ve bazı oyuncu çiftleri aynı takımda oynamayı reddediyor (reddetmek iki yönlüdür). Her oyuncu, iki rakip aynı takımda olmayacak şekilde iki takımdan birine yerleştirilebilir mi? Bazı oyuncuların hiç rakibi yok ve bazı oyuncu grupları diğerleriyle hiç karşılaşmıyor.",
+      "hints": [
+        "Bir oyuncuyu 0 takımına koy; onun her rakibi 1 takımına, onların her rakibi 0 takımına gitmeli ve böyle devam.",
+        "Takımları genişlik öncelikli bir aramayla yay ve her oyuncunun takımını bir listede tut (henüz yerleşmemiş için -1). Aynı takımdaki iki rakip, bunun olamayacağı anlamına gelir.",
+        "Hiç karşılaşmayan oyuncu gruplarının kendi aramasına ihtiyacı var: hâlâ yerleşmemiş her oyuncudan bir arama başlat."
+      ]
+    },
+    "task_order": {
+      "title": "Görev Sırası",
+      "story": "Bir proje planı numaralı görevleri ve her görev için ancak o bittikten sonra başlayabilecek görevleri listeliyor. Tüm kurallara uyan bir sırayla her görev yapılabilir mi? Görevlerin bir çember içinde birbirini beklediği bir plan asla bitirilemez.",
+      "hints": [
+        "Her görev için ondan önce gelmesi gereken kaç görev olduğunu say.",
+        "Önünde hiçbir şey olmayan görevler hemen başlayabilir. Birini yapmak, ondan sonraki her görevin sayısını azaltır; sayısı 0'a inen görev de başlayabilir.",
+        "Her görevi bu şekilde yapmayı başarırsan plan işler. Bir çembere takılmış görevler asla 0'a ulaşmaz; diğer görevler başlayabilse bile."
+      ]
+    },
+    "nearest_depot": {
+      "title": "En Yakın Depo",
+      "story": "Teslimat kamyonetleri birkaç depodan çıkıp numaralı köyler arasındaki tek yönlü yollarda ilerliyor. Her köy için, ona ulaşabilen en yakın depodan bir kamyonetin kaç yola ihtiyacı var? Bir deponun kendi köyü 0 ister ve hiçbir kamyonetin ulaşamadığı bir köy -1 bildirir. Yüzlerce depo varken planlayıcı her birinden ayrı bir arama yapamaz.",
+      "hints": [
+        "Her köy için en küçük mesafeyi tutarak her depodan bir arama yapmak doğrudur, ama neredeyse tüm işini tekrarlar.",
+        "Başlamadan önce her depoyu aynı kuyruğa 0 mesafesiyle koy: tek bir genişlik öncelikli arama sonra hepsinden birden büyür.",
+        "Bir köye ilk kez ulaşıldığında, en yakın deposundan ulaşılmıştır; sonra asla değiştirme."
+      ]
+    },
+    "one_good_trade": {
+      "title": "Tek İyi Alım Satım",
+      "story": "Bir tüccar her gün bir sandık baharatın fiyatını kaydediyor. Bir gün bir sandık alıp daha sonraki bir gün bir kez satabilir. En fazla ne kazanabilir? Hiçbir alım satım kazandırmıyorsa cevap 0'dır. Uzun bir sezon bütçe içinde kontrol edilmeli.",
+      "hints": [
+        "Her alış günü ve daha sonraki satış günü çifti cevabı verir, ama uzun bir sezonda milyonlarca çift vardır.",
+        "Bugün satıyorsan, almak için en iyi gün şimdiye kadarki en ucuz gündür.",
+        "Bir kez yürü; şimdiye kadarki en ucuz fiyatı ve en iyi kazancı tut."
+      ]
+    },
+    "fuel_loop": {
+      "title": "Yakıt Turu",
+      "story": "Dairesel bir yol çevresinde yakıt istasyonları var. i istasyonunda bir araba fuel[i] birim yakıt alabilir ve sonraki istasyona gitmek cost[i] birim yakar. Depo boş başlar ve asla sıfırın altına inemez. Araba hangi istasyondan tam bir tur tamamlayabilir? Birkaçı işe yarıyorsa en küçük numaralıyı, hiçbiri yaramıyorsa -1 bildir. Uzun bir yol bütçe içinde kontrol edilmeli.",
+      "hints": [
+        "Her istasyondan bir tur simüle etmek doğrudur, ama uzun bir yolda çok yavaştır.",
+        "Toplam yakıt toplam maliyetten azsa hiçbir başlangıç işe yaramaz. Aksi hâlde bir başlangıç işe yarar.",
+        "Depoyu tutarak 0. istasyondan bir kez sür. i istasyonundan sonra hiç sıfırın altına düşerse, başlangıçtan i'ye kadar hiçbir istasyon cevap olamaz: boş depoyla i + 1'den yeniden başla."
+      ]
+    },
+    "quiet_street": {
+      "title": "Sessiz Sokak",
+      "story": "Bir hayır kurumu bir sokaktaki evlerden bağış topluyor; her evin vereceği miktar belli. Komşular konuşuyor, bu yüzden toplayıcılar yan yana iki evi asla ziyaret etmiyor. En fazla ne toplayabilirler?",
+      "hints": [
+        "Bir ev atlayarak gitmek her zaman en iyisi değildir: bazen art arda iki ev atlanır.",
+        "Her evden sonra iki sayı yeter: bu ev ziyaret edildiyse en iyi toplam ve edilmediyse en iyi toplam.",
+        "Bu evi ziyaret etmek, miktarını bir önceki evi atlayan en iyi toplama ekler; atlamak ise önceki iki toplamdan iyi olanı korur."
+      ]
+    },
+    "exact_change": {
+      "title": "Tam Para Üstü",
+      "story": "Bir otomat para üstünü, en küçükten en büyüğe listelenen birkaç değerde madenî parayla ödüyor ve her birinden ihtiyacı kadar var. Tam olarak tutarı oluşturan en az madenî para sayısı nedir? Tutar hiç oluşturulamıyorsa -1 bildir. Önce en büyük parayı almak cazip gelir ve her zaman doğru değildir.",
+      "hints": [
+        "Sığan en büyük parayı tekrar tekrar almak bazı para setlerinde başarısız olur: 1, 3 ve 4 ile 6'yı 3+3 yerine 4+1+1 olarak öder.",
+        "0'dan yukarı her tutar için cevabı bul. 0 tutarı 0 para gerektirir.",
+        "Bir a tutarı için sığan her c parasını dene: bir para artı a - c için en iyi cevap. Oluşturulamayan tutarlar -1 kalır ve atlanır."
+      ]
+    },
+    "many_shortest_routes": {
+      "title": "Çok Sayıda En Kısa Yol",
+      "story": "Bir kurye, tek yönlü sokaklarla bağlı numaralı meydanlardan oluşan bir şehri geçiyor. Yalnızca en kısa yollar (en az sokak) yeterince hızlı. Başlangıç meydanından hedefe kaç farklı en kısa yol var? Zaten hedefte olmak bir yoldur; hiç yol yoksa 0'dır.",
+      "hints": [
+        "Genişlik öncelikli bir arama, her meydana giden en kısa yolun kaç sokak gerektirdiğini bulur.",
+        "Bir meydana giden en kısa yol, tam olarak bir sokak daha yakın bir meydandan gelir. Yani yol sayısı bu meydanlarınkilerin toplamıdır.",
+        "Arama sırasında: bir meydana ilk kez ulaşıldığında geldiği meydanın yollarını devralır; aynı uzaklıktaki bir meydandan yeniden ulaşılırsa o meydanın yolları da eklenir."
+      ]
+    },
+    "first_descent": {
+      "title": "İlk İniş",
+      "story": "Bir patika kaydı yükseklikleri yürüyüşçünün karşılaştığı sırayla tutuyor. Kendinden hemen önceki adımdan kesinlikle alçak olan ilk adımın konumunu, 0'dan sayarak, bildir. Patika hiç düşmezse -1 bildir. Boş kayıt da -1'dir.",
+      "hints": [
+        "Her yüksekliği yalnızca hemen öncekisiyle karşılaştır, şimdiye kadarki en yüksekle değil.",
+        "Aynı kalan bir adım iniş değildir; yalnızca kesinlikle daha küçük bir sayı sayılır.",
+        "İlk inişte dur. Döngü biterse cevap -1'dir."
+      ]
+    },
+    "second_highest": {
+      "title": "İkinci En Yüksek",
+      "story": "Bir jüri, tabeladaki ikinci en yüksek farklı puanı istiyor. Eşit zirve puanlar ikinciliği doğurmaz: 9 ve 9, ikinci olabilmek için daha düşük bir puana ihtiyaç duyar. Kesinlikle daha küçük bir puan yoksa -1 bildir. İkiden az farklı puan da -1'dir.",
+      "hints": [
+        "En iyi puanı ve ayrı bir ikinciliği tut; en iyi değişince ikinciliği de güncelle.",
+        "En iyiye eşit bir puan yeni bir ikincilik değildir.",
+        "Her puan aynıysa ikinci bir sıra yoktur."
+      ]
+    },
+    "even_prefixes": {
+      "title": "Çift Önekler",
+      "story": "Bir kasiyer her fişi, hiçbir fiş yokken 0 olan bir toplama ekliyor. Bu toplamlardan kaçı — başlangıçtaki 0 dahil — çifttir? Negatif bir fiş toplamı değiştirebilir.",
+      "hints": [
+        "Hiç fiş yokken başlangıç toplamı zaten bir çift toplamdır.",
+        "Her fişi ekle, sonra yeni toplamın çift olup olmadığını sor.",
+        "MOD kalanı söyler. Çift bir toplam 2'ye bölününce kalan bırakmaz."
+      ]
+    },
+    "nested_distinct": {
+      "title": "İç İçe Farklılar",
+      "story": "Bir rafta, tekrarlı ürün kodları var. Kaç farklı kod göründüğünü bildir. Bellek kıt: daha önce gördüğün kodları bir kümede veya eşlemede tutamazsın. Listeye geri bakmak serbesttir.",
+      "hints": [
+        "Bir kod, daha önceki hiçbir konumda aynı kod yoksa yenidir.",
+        "Onu yalnızca ilk göründüğü yerde say.",
+        "Bir küme kodları hatırlardı, ama bu raf o kadar bellek vermiyor."
+      ]
+    },
+    "max_product_two": {
+      "title": "En Gürültülü Çift",
+      "story": "Bir sıradaki ses düzeylerinden, negatif de olabilen, iki hoparlör seçiliyor. Birleşik gürültüleri iki düzeyin çarpımıdır. İki farklı hoparlörün yapabileceği en büyük çarpımı bildir. İkiden az hoparlörde cevap 0'dır.",
+      "hints": [
+        "En iyi çift ya en büyük iki düzeydir ya da en negatif iki düzey.",
+        "Sırayı bir kez yürürken en büyük ikiyi ve en küçük ikiyi tut.",
+        "Her çifti karşılaştırmak doğrudur ve uzun bir sıra için çok yavaştır."
+      ]
+    },
+    "pair_sum_count": {
+      "title": "Çift Biletler",
+      "story": "Bir gişe, tekrarlı fiyatları listelenen biletler satıyor. İki farklı konumdaki kaç bilet çifti hedef fiyata toplanır? Sıra önemli değildir ve bir bilet kendisiyle eşleşemez. İki kez görünen bir fiyat, ancak iki kopyayı da kullanarak kendisiyle eşleşebilir.",
+      "hints": [
+        "Her fiyatı okurken, daha önceki kaç fiyatın hedefi tamamlayacağını sor.",
+        "Fiyattan, daha önce kaç kez görüldüğüne giden bir eşleme bunu tek bakışta yanıtlar.",
+        "Üzerinde olduğun fiyatı kaydetmeden önce eski kopyaları say; yoksa bir bilet kendisiyle eşleşir."
+      ]
+    },
+    "same_value_span": {
+      "title": "Aynı Değer Aralığı",
+      "story": "İşaret fenerleri art arda bir kod yakıp söndürüyor. Bir kodun aralığı, ilk yanışından aynı kodun sonraki bir yanışına olan uzaklıktır. En geniş böyle aralığı bildir. Hiçbir kod tekrarlamazsa -1 bildir.",
+      "hints": [
+        "Her kodun ilk konumunu hatırla.",
+        "Bir kod yeniden görününce aralık, şimdiki konum eksi o ilk konumdur.",
+        "En geniş aralığı tut. Her konum çiftini karşılaştırmak çok yavaştır."
+      ]
+    },
+    "shared_values": {
+      "title": "Ortak Değerler",
+      "story": "İki tezgah, her biri kendi tekrarlarıyla, ürün kodları listeliyor. Her iki tezgahta da görünen kaç farklı kod var? Her tezgahta üç kez görünen bir kod yine de tek bir ortak koddur.",
+      "hints": [
+        "Bir tezgahın kodlarını bir kümeye koy ki tekrarlar birleşsin.",
+        "Diğer tezgahı yürü ve kümenin zaten tuttuğu kodları yine bir kümede topla.",
+        "O ikinci kümenin boyutu cevaptır. Her kopyayı saymak fazla sayar."
+      ]
+    },
+    "exact_gaps": {
+      "title": "Tam Aralıklar",
+      "story": "Farklı mil taşlarından oluşan sıralı bir sıra, en küçükten başlayarak zaten dizili. Tam olarak verilen aralık kadar ayrı duran kaç taş çifti var? Taşları bir kümede tutamazsın; sıra zaten sıralı, iki hareketli işaret yeter. Bellek dardır.",
+      "hints": [
+        "Bir işareti soldan, diğerini onun sağından başlat.",
+        "Sağ işaret aralığın gerisinde kaldıkça onu ileri taşı.",
+        "Bir çifti yalnızca uzaklık tam aralıksa say, sonra sol işareti taşı."
+      ]
+    },
+    "pairs_under": {
+      "title": "Sınır Altı Çiftler",
+      "story": "En küçükten başlayan sıralı bir fiyat listesinde tekrarlar olabilir. Farklı konumlardan kaç çift en fazla limite toplanır? Yalnızca en yakınlar değil, böyle her çift sayılır.",
+      "hints": [
+        "Bir işareti başa, birini sona koy.",
+        "İki fiyat limite sığıyorsa, aralarındaki her fiyat sol ile eşleşir; bütün aralığı ekle.",
+        "Sığmıyorlarsa sağ fiyat yüksektir; onu sola taşı."
+      ]
+    },
+    "sorted_union": {
+      "title": "Sıralı Birleşim",
+      "story": "İki çan, en küçükten başlayan sıralı saat listeleri çalıyor; bir listenin içinde tekrar olabilir. En az bir çanın çaldığı kaç farklı saat var? Yeni bir liste kurma; birleştirirken say.",
+      "hints": [
+        "Her listede bir işaretle yürü, her seferinde daha küçük saati al.",
+        "İki çan aynı saati gösterince bu yine tek bir saattir.",
+        "Çoktan saydığın bir saatin sonraki her kopyasını atla."
+      ]
+    },
+    "closest_gap": {
+      "title": "En Yakın Aralık",
+      "story": "En küçükten başlayan sıralı bir sayı sırası, iki farklı konum vermeli. Toplamları hedefe olabildiğince yakın olmalı. En iyi toplamın hedeften ne kadar uzakta olduğunu bildir — mutlak fark, asla negatif değil. En az iki sayı vardır.",
+      "hints": [
+        "Bir işaret soldan, biri sağdan başlar.",
+        "Toplam çok küçükse sol işareti, çok büyükse sağ işareti taşı.",
+        "ABS hedefe uzaklığı verir. Her çifti denemek çok yavaştır."
+      ]
+    },
+    "windows_at_least": {
+      "title": "En Az Pencereler",
+      "story": "Bir peron, tam olarak verilen genişlikteki kaç aralığın toplamının en az hedef olduğunu sayıyor. Aralıklar örtüşür: her başlangıç konumu kendi aralığıdır. Genişlik günden uzunsa 0 bildir.",
+      "hints": [
+        "İlk pencereyi topla, sonra kaydır: yeni saati ekle, dışarı düşen saati çıkar.",
+        "Toplamı hedefe ulaşınca pencereyi say.",
+        "Her başlangıç için toplamı sıfırdan kurma."
+      ]
+    },
+    "one_dropout": {
+      "title": "Tek Kopma",
+      "story": "Bir sinyal, 1'ler ve 0'lardan oluşan bir sıradır. Kullanılabilir bir aralık en fazla bir 0 içerebilir. En uzun kullanılabilir aralığın uzunluğunu bildir. Yalnızca 1'lerden oluşan bir sıra baştan sona kullanılabilir; boş bir sinyal 0'dır.",
+      "hints": [
+        "Sağ ucu büyüt ve şimdiki aralıktaki sıfırları say.",
+        "İkinci bir sıfır girince, tek sıfır kalana kadar sol ucu küçült.",
+        "Cevap, tutmana izin verilen en geniş aralıktır."
+      ]
+    },
+    "peak_windows": {
+      "title": "Tepe Pencereler",
+      "story": "Tam olarak verilen genişlikteki her aralığın bir tepesi, en büyük okuması vardır. Bu tepeleri topla ve toplamı bildir. Genişlik sığmazsa 0 bildir. Her aralığı sıfırdan taramak uzun bir gün için çok yavaştır.",
+      "hints": [
+        "Her pencerenin okumalarının toplamını değil, en büyüğünü istiyorsun.",
+        "Bir liste deque yerine durabilir: hâlâ tepe olabilecek indeksleri tut, en büyük önde.",
+        "Bir indeks pencereden çıkınca bırak; daha yeni ve daha büyük bir okumanın ardındaki küçük okumaları da bırak."
+      ]
+    },
+    "counter_sum": {
+      "title": "Gişe Toplamı",
+      "story": "Bir gişe bir eylem listesi okuyor. Pozitif bir sayı, o biletle sıranın arkasına katılan bir müşteridir. 0, öndeki müşteriyi çağırır ve biletini bir toplama eklersin. Boş sırayı çağırmak bir şey yapmaz. Çağrılan herkesin toplamını bildir.",
+      "hints": [
+        "Müşteriler geldikleri sırayla ayrılır, bu bir kuyruktur.",
+        "Pozitif bir eylem arkaya katılır. 0 önü alır, ama yalnızca biri bekliyorsa.",
+        "Bileti müşteri ayrılırken ekle, geldiğinde değil."
+      ]
+    },
+    "josephus_line": {
+      "title": "Sayarak Eleme",
+      "story": "1'den n'e numaralı n kişi o sırayla bir çemberde duruyor; n, people girdisidir. Önden k kişi say, k burada count girdisidir: k. kişi ayrılır ve sayım sonraki kişiyle sürer. Ayakta kalan son kişinin numarasını bildir. İki girdi de en az 1'dir.",
+      "hints": [
+        "Bir kuyruk çember olabilir: ön, şu an saydığın kişidir.",
+        "Birini atlamak için onu önden al ve arkaya gönder.",
+        "k. kişi ayrılır ve geri dönmez. Bir kişi kalınca cevap odur."
+      ]
+    },
+    "ticket_minutes": {
+      "title": "Bilet Dakikaları",
+      "story": "İnsanlar bir sırada duruyor, her birinin birkaç bileti var. Her dakika öndeki kişi bir bilet alır ve hâlâ ihtiyacı varsa arkaya geçer. Kişi, 0'dan sayılan bir konumdur. O kişi biletlerinin hepsini alınca kaç dakika geçmiştir?",
+      "hints": [
+        "Her dakikayı tek tek oynamak zorunda değilsin.",
+        "Kişi bitirmeden önce, önündekiler en fazla o kişinin ihtiyacı kadar bilet alabilir.",
+        "Arkasındakiler en fazla bundan bir eksik alabilir."
+      ]
+    },
+    "stack_sorted": {
+      "title": "Yığın Sırası",
+      "story": "1, 2, 3 diye giden vagonlar bu sırayla geliyor. Bir yan hat bir yığındır: sıradaki vagonu üstüne itebilir veya üstteki vagonu giden hatta çıkarabilirsin. İstenen hat, 1'den n'e kadar bir yeniden dizilimdir. O hattın kurulup kurulamayacağını bildir. Boş bir istenen hat kurulabilir.",
+      "hints": [
+        "Vagonları sırayla it ve her itişten sonra, üstteki vagon hattın sıradaki istediği olduğu sürece çıkar.",
+        "Sırayı bozarak itme; hâlâ önce başka bir vagon gerekiyorsa istenmeyen bir vagonu çıkarma.",
+        "İstenen her vagon çıktıysa hat mümkündür."
+      ]
+    },
+    "tail_lamp": {
+      "title": "Kuyruk Lambası",
+      "story": "Bir tren, vagonlardan oluşan bir zincirdir. Bir vagonun numarasını ve sonraki vagonu görebilirsin; sonraki hiçbir şey olmayabilir. Son vagondaki numarayı bildir. Boş bir trenin lambası yoktur; -1 bildir.",
+      "hints": [
+        "Baştan başla. Tuttuğun vagon IS NOT NOTHING olduğu sürece numarasını hatırla ve NEXT NODE ile ilerle.",
+        "Okumana izin verilen son numara kuyruktur.",
+        "Boş olabilecek bir vagonda NODE VALUE okuma."
+      ]
+    },
+    "cold_cars": {
+      "title": "Soğuk Vagonlar",
+      "story": "Her vagon bir sıcaklık taşır. Sıcaklığı sınırın kesinlikle altında olan vagonları say. Tam sınırdaki bir vagon soğuk değildir. Boş bir trende soğuk vagon yoktur.",
+      "hints": [
+        "Vagon IS NOT NOTHING olduğu sürece NEXT NODE ile yürü.",
+        "NODE VALUE yalnızca bu kontrolün içinde güvenlidir.",
+        "Bir vagonu yalnızca sıcaklığı sınırdan kesinlikle düşükse say."
+      ]
+    },
+    "named_car": {
+      "title": "Adı Geçen Vagon",
+      "story": "Bir memurun hedef vagon numarası ve trenin başı var. Herhangi bir vagonun o numarayı taşıyıp taşımadığını bildir. Cevap evet ya da hayırdır. Boş bir trende vagon yoktur; cevap hayırdır.",
+      "hints": [
+        "Vagon IS NOT NOTHING olduğu sürece zinciri yürü.",
+        "NODE VALUE hedefe eşitse hemen evet diyebilirsin.",
+        "Yürüyüş biterse cevap hayırdır."
+      ]
+    },
+    "end_gap": {
+      "title": "Uç Farkı",
+      "story": "Son vagonun numarasından ilk vagonun numarasını çıkar ve bildir. İkiden az vagonu olan bir trenin farkı yoktur; 0 bildir. Kuyruk daha küçükse fark negatif olabilir.",
+      "hints": [
+        "Yürümeye devam etmeden önce ilk NODE VALUE değerini hatırla.",
+        "Son vagon yürüyüşüyle aynı şekilde kuyruğa kadar yürü.",
+        "Son sayıdan ilk sayıyı çıkar. Erken durursan daha uzun bir treni kaçırırsın."
+      ]
+    },
+    "rising_links": {
+      "title": "Yükselen Bağlar",
+      "story": "Bir vagonun numarasının hemen önceki vagondan kesinlikle yüksek olduğu yerleri say. Eşit komşular bir yükseliş değildir. Boş bir trende veya tek vagonda yükseliş yoktur.",
+      "hints": [
+        "Sonraki vagona geçerken önceki numarayı hatırla.",
+        "Yalnızca komşuları ve yalnızca kesin büyüktür ile karşılaştır.",
+        "İlk vagonun öncesi yoktur, tek başına bir yükseliş başlatamaz."
+      ]
+    },
+    "left_vine": {
+      "title": "Sol Asma",
+      "story": "Kökten başlayarak hep sol çocuğa geç, asla sağa değil. Kök varsa kök dahil, bu asmanın üzerinde kaç düğüm var? Boş bir ağaç 0'dır.",
+      "hints": [
+        "Düğüm IS NOT NOTHING olduğu sürece say ve onu LEFT ile değiştir.",
+        "RIGHT bu asmanın parçası değildir.",
+        "Boş bir ağaç döngüye hiç girmez."
+      ]
+    },
+    "right_marks": {
+      "title": "Sağ İşaretler",
+      "story": "Kökten hep sağa giden asmanın üzerindeki işaretleri topla. Sol çocukları ekleme. Boş bir ağacın toplamı 0'dır.",
+      "hints": [
+        "Bu, sol asmanın yürüyüşüdür; ama RIGHT izlersin ve saymak yerine NODE VALUE eklersin.",
+        "İşareti okumadan önce IS NOT NOTHING içinde kal.",
+        "Asmadan sarkan bir sol çocuk dahil değildir."
+      ]
+    },
+    "lone_tree": {
+      "title": "Yalnız Ağaç",
+      "story": "Bir koru tam olarak bir düğümse yalnızdır: bir kökü vardır ve iki çocuğu da boştur. Boş bir koru yalnız değildir; çocuğu olan bir kök de değildir. Evet ya da hayır bildir.",
+      "hints": [
+        "Önce kök IS NOT NOTHING olmalı. Boş bir koru hayır der.",
+        "Sonra o kökün hem LEFT hem RIGHT değeri IS NOTHING olmalı.",
+        "Çocuğu olan her ağaç hayır der, gerisi boş olsa bile."
+      ]
+    },
+    "node_census": {
+      "title": "Düğüm Sayımı",
+      "story": "Ağaçtaki her düğümü say. Özyineleme yok: ziyaret edilecek düğümlerin bir yığınını tut ve bir çocuğu ancak boş olmadığını kontrol ettikten sonra it. Boş bir ağaç 0'dır.",
+      "hints": [
+        "Kök IS NOT NOTHING ise onu it.",
+        "Bir düğümü çıkar, say, sonra LEFT ve RIGHT değerlerini her biri IS NOT NOTHING ise it.",
+        "Yalnızca sol asmayı saymak ağacın geri kalanını kaçırır."
+      ]
+    },
+    "leaf_census": {
+      "title": "Yaprak Sayımı",
+      "story": "Bir yaprağın ne sol ne de sağ çocuğu vardır. Yaprakları say. Özyinelemeyle değil, bir yığınla yürü. Boş bir ağacın yaprağı yoktur.",
+      "hints": [
+        "Kök varsa onu it, tam sayımda olduğu gibi.",
+        "Bir düğüm, iki çocuğu da IS NOTHING ise yapraktır.",
+        "Tek çocuğu olan bir düğüm yaprak değildir, ama çocuğu olabilir."
+      ]
+    },
+    "lowest_leaf": {
+      "title": "En Alçak Yaprak",
+      "story": "Yalnızca yapraklar arasında en küçük işareti bildir. Hâlâ çocuğu olan iç işaretler, daha küçük olsalar bile sayılmaz. Yaprak yoksa -1 bildir.",
+      "hints": [
+        "Her düğümü bir yığınla yürü.",
+        "En iyi işareti yalnızca iki çocuk da boşken güncelle.",
+        "Bir yaprak görüp görmediğini have ile hatırla. Hiç görmezsen cevap -1'dir."
+      ]
+    },
+    "platform_doors": {
+      "title": "Peron Kapıları",
+      "story": "Bir istasyon ağı, her durak için doğrudan gidebildiğin durakları listeler. Verilen istasyonun kaç kapısı olduğunu bildir — kaç komşu listelediğini. Duraklar 0'dan numaralanır.",
+      "hints": [
+        "NEIGHBORS bir duraktan çıkan kapıların listesini verir.",
+        "O listenin LENGTH değeri cevaptır.",
+        "Yalnızca sıfır numaralı durağın değil, her durağın kapısı olabilir."
+      ]
+    },
+    "direct_hop": {
+      "title": "Doğrudan Sıçrama",
+      "story": "Hedefin başlangıçtan tek doğrudan sefer olup olmadığını bildir: hedef, başlangıcın komşu listesinde görünür. Ters yöndeki bir sefer sayılmaz. Cevap evet ya da hayırdır.",
+      "hints": [
+        "Yalnızca başlangıcın NEIGHBORS listesini oku.",
+        "FOR EACH komşu için hedefin ona eşit olup olmadığını sor.",
+        "İlk komşu tek kapı değildir. Hiçbiri uymazsa cevap hayırdır."
+      ]
+    },
+    "silent_stops": {
+      "title": "Sessiz Duraklar",
+      "story": "Sessiz bir durak, giden sefer listelemez. Ağda kaç durak sessizdir? Kaç durak olduğunu bilmek için NODE COUNT kullan; duraklar 0'dan numaralanır.",
+      "hints": [
+        "0'dan NODE COUNT'a kadar her durak numarasını FOR ile dolaş.",
+        "Bir durak, NEIGHBORS listesinin LENGTH değeri 0 ise sessizdir.",
+        "Kapısı olan durakları saymak başka bir soruyu yanıtlar."
+      ]
+    },
+    "scout_reach": {
+      "title": "Keşif Erişimi",
+      "story": "Bir keşif eri bir duraktan başlar ve giden seferleri istediği kadar izleyebilir. Başlangıç dahil, kaç farklı durağa ulaşabileceğini bildir. Bir durağa bir kez girilsin diye bir yığın ve MARK kullan. Başlangıçtan seferi olmayan duraklar sayılmaz.",
+      "hints": [
+        "Başlangıcı MARK et, it ve yığın IS NOT EMPTY olduğu sürece bir durak çıkarıp say.",
+        "FOR EACH komşu için, VISITED değilse MARK et ve it.",
+        "NODE COUNT, keşif erinin hiç ulaşamayacağı durakları da sayar."
+      ]
+    },
+    "scout_last": {
+      "title": "Son Keşif",
+      "story": "Aynı keşif eri, Keşif Erişimi bulmacasındaki gibi bir yığınla derinlik öncelikli yürür: bir durağı yığına iterken işaretler, böylece her durak en fazla bir kez itilir. Komşular NEIGHBORS listesinin sırasında itilir, bu yüzden son komşu önce çıkar. Keşif erinin çıkardığı son durağın numarasını bildir. Başlangıç her zaman çıkarılır.",
+      "hints": [
+        "Bu, erişim yürüyüşüdür; ama yalnızca saymak yerine az önce çıkardığın durağı hatırlarsın.",
+        "Komşuları listelenen sırayla it, sıralama.",
+        "Bir kuyruk farklı bir son durak çıkarırdı. Bu keşif eri bir yığın kullanır."
+      ]
+    },
+    "biggest_patch": {
+      "title": "En Büyük Ada",
+      "story": "Seferler iki yönlüdür: bir durak diğerini listeliyorsa, diğeri de onu geri listeler. Bir ada, içinde dolaşabildiğin bir gruptur. En büyük adada kaç durak olduğunu bildir. Seferi olmayan bir durak, tek duraklı bir adadır.",
+      "hints": [
+        "Henüz VISITED olmayan her durağı yeni bir adanın başlangıcı olarak dene.",
+        "Adayı, Keşif Erişimi ile aynı yığın yürüyüşüyle say.",
+        "En büyük sayıyı tut. Tüm ağ, ancak her durak diğerinden ulaşılabilirse tek adadır."
+      ]
+    },
+    "source_radius": {
+      "title": "Kaynak Yarıçapı",
+      "story": "Başlangıçtan her sefer bir sıçrama tutar. Ulaşılabilen herhangi bir durağa varmak için gereken en büyük sıçrama sayısını bildir. Ulaşılamayan duraklar sayılmaz. Başlangıcın kendisi uzaklık 0'dır, tek başına bir başlangıç 0'dır.",
+      "hints": [
+        "Bir kuyruk durakları uzaklığa göre yürür. Bir liste her durağın uzaklığını tutabilir; -1 henüz görülmedi demektir.",
+        "Bir komşuya ilk ulaştığında uzaklığı, geldiğin duraktan bir fazladır.",
+        "Cevap yazdığın en büyük uzaklıktır. Her durak için tüm ağı yeniden aramak çok yavaştır."
+      ]
+    },
+    "last_layer": {
+      "title": "Son Katman",
+      "story": "Her sefer bir sıçrama tutar; bir durağın uzaklığı, başlangıçtan ona ulaşmak için gereken en az sıçrama sayısıdır. Son katman, uzaklığı en büyük uzaklığa eşit olan her ulaşılmış duraktır. O katmanda kaç durak olduğunu bildir. Uzaklığın kendisini bildirme.",
+      "hints": [
+        "Önce ulaşılan her durağın uzaklığını genişlik öncelikli bir yürüyüşle bul: bir kuyruk ve -1'in henüz ulaşılmadı demek olduğu bir uzaklık listesi.",
+        "Sonra kayıtlı uzaklığı o en uzak sayıya eşit olan durakları say.",
+        "Hâlâ -1 yazılı bir durağa hiç ulaşılmamıştır ve katmanda değildir."
+      ]
+    },
+    "cookie_gifts": {
+      "title": "Kurabiye Hediyeleri",
+      "story": "Çocuklar ve kurabiyeler ikisi de en küçükten başlayarak listelenir. Bir çocuk, iştahı kadar veya daha büyük herhangi bir kurabiyeyle yetinir. Her kurabiye en fazla bir çocuğu doyurur. Kaç çocuk yetinebilir?",
+      "hints": [
+        "Kalan en küçük kurabiyeyi hâlâ bekleyen en küçük çocuğa sun.",
+        "Çok küçükse o kurabiye sonraki hiçbir çocuğu da doyuramaz, çünkü sonraki çocuklar en az o kadar ister. Kurabiyeyi atla.",
+        "Sığıyorsa hem çocuk hem kurabiye kullanılır."
+      ]
+    },
+    "dock_overlap": {
+      "title": "İskele Örtüşmesi",
+      "story": "Gemilerin varış ve ayrılış zamanları var; her liste en küçükten başlayarak sıralı. Bir gemi iskeleyi varışından ayrılışına kadar, ayrılış dahil değil, tutar. Aynı anda iskelede olan en fazla gemi sayısı nedir? Gemi yoksa 0'dır.",
+      "hints": [
+        "İki sıralı listeyi yürü. Bir varış sayıyı artırır; bir ayrılış azaltır.",
+        "Bir varış ve bir ayrılış aynı dakikayı paylaşıyorsa önce ayrılış olur, o gemi çoktan gitmiştir.",
+        "Cevap gördüğün en yüksek sayıdır."
+      ]
+    },
+    "leap_reach": {
+      "title": "Sıçrama Erişimi",
+      "story": "Taşlar bir sırada duruyor. Bir taşın üzerindeki sayı, o taştan yapabileceğin en uzun sıçramadır: 1'den o sayıya kadar istediğin kadar taş ileri gidebilirsin; 0 yazan bir taştan hiçbir yere gidemezsin. İlk taştan başlarsın. Son taşa ulaşıp ulaşamayacağını bildir. Tek bir taşa zaten ulaşılmıştır.",
+      "hints": [
+        "Şimdiye kadar ulaşabildiğin en uzak indeksi tut.",
+        "İndeksin o en uzak erişimin ötesindeyse takılırsın.",
+        "Üzerinde durabildiğin bir taştan yeni erişim, indeks artı sıçramadır."
+      ]
+    },
+    "plank_ways": {
+      "title": "Kalas Yolları",
+      "story": "Bir iskele kalaslardan oluşan bir sıradır. Bir kalastan bir veya iki kalas ileri adım atabilirsin. İlk kalastan önce başlayarak, verilen uzunluktaki bir iskeleye kaç yolla varılır? Uzunluk 0 ve uzunluk 1'in birer yolu vardır: hiçbir şey yapmamak ya da tek adımı atmak.",
+      "hints": [
+        "n uzunluğuna varmanın yolları, n-1'e varıp bir adım ile n-2'ye varıp iki adımın toplamıdır.",
+        "İstersen bütün tabloyu değil, yalnızca önceki iki cevabı tut.",
+        "Uzunluk 0 bir yoldur. Onun için 0 deme."
+      ]
+    },
+    "step_toll": {
+      "title": "Adım Geçiş Ücreti",
+      "story": "Her taş, üzerine indiğinde bir geçiş ücreti alır. İlk taşın üzerinde başlarsın ve onun ücretini ödersin. Bir taştan bir veya iki taş ileri zıplayabilirsin ve son taşta bitirmek zorundasın. En ucuz toplam ücreti bildir. Taş yoksa 0'dır. Tek taş, o taşın ücretidir.",
+      "hints": [
+        "Bir taşa inmenin en ucuz yolu, ücreti artı gelebileceğin iki taşın daha ucuzudur.",
+        "İlk taşın ücretini her zaman ödersin. İkinci taşa yalnızca ilkinden gelinir; bu yüzden ikisinin ücreti birlikte ödenir.",
+        "Her taşı ödemek gerekmez: bir sıçrama birini atlar."
+      ]
+    },
+    "aisle_cost": {
+      "title": "Koridor Bedeli",
+      "story": "Bir depo, koridor bedellerinden oluşan bir ızgaradır. Sol üst kareden başlarsın ve yalnızca sağa veya aşağı adım atabilirsin; sağ altta bitirmelisin. Her iki köşe dahil, bastığın karelerin en ucuz toplamını bildir. Bedeller asla negatif değildir.",
+      "hints": [
+        "Bir kareye girmenin en ucuz yolu, kendi bedeli artı üstündeki ve solundaki kareden ucuz olanıdır.",
+        "İlk sıraya yalnızca soldan, ilk sütuna yalnızca üstten varılır.",
+        "Depodaki her kareyi toplamak, hiç yürümediğin koridorları da öder."
+      ]
+    },
+    "open_lanes": {
+      "title": "Açık Şeritler",
+      "story": "0 ve 1'lerden oluşan bir ızgara bir zemindir. 1 duvardır. Sol üstten, açık olan, başlarsın ve yalnızca sağa veya aşağı, yine açık olan sağ alta adım atarsın. Duvara basmayan kaç farklı yol var? Köşelerden biri duvar olsaydı yol olmazdı, ama köşeler açıktır.",
+      "hints": [
+        "Açık bir kareye giren yollar, üstteki kareye giren yollar artı soldaki kareye giren yollardır.",
+        "Bir duvarın sıfır yolu vardır ve komşularını beslemez.",
+        "Tek bir duvar, hepsini kesmedikçe her yolu kapatmaz."
+      ]
+    },
+    "diagonal_haul": {
+      "title": "Çapraz Taşıma",
+      "story": "Bir taşıma sağa, aşağı veya çapraz sağ-aşağı adım atabilir. Her kare, negatif de olabilen yükünü ekler. Sol üstten başla ve sağ altta bitir. Toplayabileceğin en büyük toplamı bildir.",
+      "hints": [
+        "Bir karedeki en iyi toplam, yükü artı gelebileceğin üç karenin en iyisidir: sol, üst ve sol-üst.",
+        "İlk karenin önceki karesi yoktur; toplamı yalnızca kendi yüküdür.",
+        "İlk sırada kalmak, aşağı bir adımın toplayacağı yükü kaçırır."
+      ]
+    },
+    "pack_bins": {
+      "title": "Kasa Dizmek",
+      "story": "Her sandığın bir ağırlığı ve bir değeri vardır ve en fazla bir kez dizilebilir. Kasa en fazla verilen kapasiteyi taşır. Dizilebilecek en büyük toplam değeri bildir. Sandık yoksa veya kapasite yoksa cevap 0'dır. Ağırlıklar en az 1'dir.",
+      "hints": [
+        "0'dan limite kadar her kapasite için en iyi değeri bir listede tut.",
+        "Her sandık için kapasiteleri aşağı doğru yürü ki sandık iki kez kullanılmasın.",
+        "Her alt kümeyi denemek doğrudur ve sandık çoğalınca çok yavaştır."
+      ]
+    },
+    "ticket_price": {
+      "title": "Müze Biletleri",
+      "story": "Kasabanın müzesi bilet fiyatını yaşa göre belirliyor. 6 yaşından küçük çocuklar ücretsiz girer. 65 yaş ve üstü ziyaretçiler 4 jeton öder. Diğer herkes 10 jeton öder. Verilen yaştaki bir ziyaretçinin ödeyeceği fiyatı bildir.",
+      "hints": [
+        "Üç fiyat var. Her seferinde bir yaş grubunu IF ile kontrol et ve fiyatını RETURN ile döndür.",
+        "Önce ücretsiz grubu LESS THAN ile, sonra yaşlı ziyaretçileri GREATER OR EQUAL ile kontrol et; geriye kalan herkes 10 öder.",
+        "Sınırlara dikkat: 6 yaşındaki biri artık 10 öder, 65 yaşındaki biri ise artık 4 öder."
+      ]
+    },
+    "stair_lights": {
+      "title": "Merdiven Lambaları",
+      "story": "Bir merdivenin basamakları 1, 2, 3 diye en üst basamağa kadar numaralanmış. Bir elektrikçi, numarası aralığın katı olan her basamağa lamba takıyor: aralık 3 ise 3, 6, 9 ve devamı. Kaç lamba takılır? En üst basamak da sayılır.",
+      "hints": [
+        "1'den en üst basamağa kadar her basamak numarasını dolaş ve lamba alan basamakları say.",
+        "Numarasının aralığa bölümünden kalan (REMAINDER) 0 olan basamak lamba alır.",
+        "FOR, TO değerinin hemen öncesinde durur; en üst basamağı da saymak için döngü bir fazlasına kadar gitmeli."
+      ]
+    },
+    "party_tables": {
+      "title": "Parti Masaları",
+      "story": "Bir partideki yuvarlak masaların her birinde aynı sayıda misafir oturabiliyor. Her misafire yer olması için kaç masa kurulmalı? Bir masa kısmen boş kalabilir; hiç misafir yoksa masa da gerekmez.",
+      "hints": [
+        "FLOOR DIVIDE, kaç masanın tamamen dolduğunu söyler.",
+        "REMAINDER 0 değilse bazı misafirler açıkta kalır ve bir masa daha gerekir.",
+        "Misafirler masaları tam dolduruyorsa fazladan masa gerekmez; 0 misafire de 0 masa gerekir."
+      ]
+    },
+    "doubling_jar": {
+      "title": "İkiye Katlanan Kumbara",
+      "story": "Bir kumbarada birkaç jeton var. Her haftanın sonunda kumbaradaki jeton sayısı iki katına çıkıyor. Kaç hafta sonra kumbarada en az hedef kadar jeton olur? Kumbarada zaten yeterince jeton varsa cevap 0 haftadır.",
+      "hints": [
+        "Kumbaradaki jetonları ve bir hafta sayacını tut; jeton hâlâ azken ikiye katlamayı tekrarla.",
+        "WHILE, koşulu doğru olduğu sürece tekrarlar: burada kumbaradaki jeton hedeften az (LESS THAN) olduğu sürece.",
+        "Kumbara hedefte ya da üstünde başlıyorsa döngü hiç çalışmamalı; cevap 0 olur."
+      ]
+    },
+    "digit_wheels": {
+      "title": "Rakam Çarkları",
+      "story": "Mekanik bir sayaç, her rakam için bir çark kullanarak bir sayı basıyor. Verilen sayıyı basmak için kaç çark gerekir? Sayının başında sıfır yoktur; 0'ı basmak için de bir çark gerekir.",
+      "hints": [
+        "Sayının son rakamını kaç kez kesip atabildiğini say.",
+        "10 ile FLOOR DIVIDE son rakamı atar; sayı 10 ya da daha büyük olduğu sürece (WHILE) tekrarla.",
+        "0'ı unutma: tek rakamla basılır, yani cevap asla 0 olmaz."
+      ]
+    },
+    "three_planks": {
+      "title": "Üç Tahta",
+      "story": "Bir marangoz üç tahtayı çivileyip üçgen bir çerçeve yapmak istiyor. Bu yalnızca her tahta diğer ikisinin toplamından kısaysa olur; bir tahta diğer ikisinin toplamına tam eşitse çerçeve dümdüz çöker. Üç tahta bir çerçeve oluşturabilir mi?",
+      "hints": [
+        "Üç kontrol var: her tahta, diğer ikisinin toplamıyla karşılaştırılır.",
+        "Kontrolleri AND ile birleştir: çerçeve ancak üçü de doğruysa olur.",
+        "GREATER OR EQUAL değil GREATER THAN kullan: eşit uzunluk düz bir çerçeve verir ve sayılmaz."
+      ]
+    },
+    "lighthouse_bell": {
+      "title": "Fener ve Çan",
+      "story": "Bir deniz feneri lambasını birkaç saniyede bir yakıyor, liman çanı da kendi düzeninde çalıyor: 3 saniyede bir ışık ve 5 saniyede bir çan varsa lamba 3, 6, 9 … saniyelerde yanar, çan 5, 10, 15 … saniyelerde çalar. İkisi aynı saniyeye denk gelirse denizciler onları ayırt edemez ve hiçbir şey fark etmez. 1'den son saniyeye kadar (son saniye dahil) saniyeleri sayınca, denizciler kaç saniyede tam olarak tek bir işaret fark eder?",
+      "hints": [
+        "1'den son saniyeye kadar, sonuncusu dahil her saniyeyi kontrol et.",
+        "Işık periyoduna göre REMAINDER 0 ise o saniyede ışık, çan periyoduna göre REMAINDER 0 ise çan vardır.",
+        "Bir saniyeyi yalnızca ikisinden tam biri olduğunda say: ışık AND çan yok, OR çan AND ışık yok."
+      ]
+    },
+    "dry_spell": {
+      "title": "En Uzun Kuraklık",
+      "story": "Bir hava istasyonu her gün kaç milimetre yağmur yağdığını kaydediyor. Kuraklık, hiç yağmur yağmayan (0 mm) art arda günlerden oluşan bir dönemdir. En uzun kuraklık kaç gün sürdü? Hiç kuru gün olmayan bir kayıt 0 bildirir.",
+      "hints": [
+        "Günleri sırayla dolaş ve iki sayı tut: şu anki kuraklığın uzunluğu ve şimdiye kadarki en uzunu.",
+        "Kuru bir gün şu anki kuraklığı bir gün uzatır; yağmurlu bir gün onu 0'a döndürür.",
+        "En uzun kuraklık son güne kadar sürebilir; bu yüzden en iyiyle yalnızca yağmur gelince değil, her kuru günden sonra karşılaştır."
+      ]
+    },
+    "hill_tops": {
+      "title": "Tepeler",
+      "story": "Bir yürüyüş uygulaması bir parkuru, baştan sona eşit aralıklı noktaların yükseklikleri olarak saklıyor. Tepe, hem hemen önceki hem de hemen sonraki noktadan kesinlikle daha yüksek olan bir noktadır. İlk ve son noktaların tek komşusu olduğu için asla tepe olmazlar; komşu iki noktanın aynı yükseklikte olduğu düz bir zirve de tepe sayılmaz. Parkurda kaç tepe var?",
+      "hints": [
+        "Yalnızca iki yanında da komşusu olan noktalar tepe olabilir: 1. konumdan sondan bir öncekine kadar.",
+        "İki komşuya ulaşmak için GET ELEMENT'i konumun MINUS 1 ve PLUS 1 hâliyle kullan.",
+        "İki komşu da kesinlikle daha alçak olmalı: iki tarafta da GREATER THAN, AND ile birleştirilmiş."
+      ]
+    },
+    "lift_trips": {
+      "title": "Asansör Seferleri",
+      "story": "İnsanlar verilen sırayla, her biri kendi ağırlığıyla bir asansör için kuyrukta bekliyor. Asansör, içerideki toplam ağırlık kapasitesini aşmadığı sürece kuyruğun başından insanları alıyor. Sıradaki kişi kapasiteyi aşacaksa asansör kalkar ve geri kalanlar için boş döner. Herkesi taşımak için kaç sefer yapar? Bekleyen kimse yoksa hiç sefer yapmaz.",
+      "hints": [
+        "Kuyruğu sırayla dolaş; şu anki seferdeki ağırlığı ve sefer sayısını tut.",
+        "Sıradaki kişi yükü kapasiteden büyük (GREATER THAN) yapacaksa asansör önce kalkar; sonra o kişi biner.",
+        "Son grubun da kendi seferi olur; boş bir kuyruk ise 0 sefer ister."
+      ]
+    },
+    "last_sighting": {
+      "title": "Son Görülme",
+      "story": "Bir kuş gözlemcisi, yemliğe konan her kuşun halka numarasını sırayla yazıyor. Verilen kuşun en son görüldüğü konumu 0'dan sayarak bildir; hiç gelmediyse -1 bildir.",
+      "hints": [
+        "Her konuma bak ve kuşun göründüğü en son konumu hatırla.",
+        "-1 ile başlayan bir cevap tut ve kuş her göründüğünde üzerine yaz; ilk görüldüğü yerde durma.",
+        "Sondan geriye doğru yürüyüp ilk eşleşmede döndürmek de olur: FOR, BY -1 ile geriye sayabilir."
+      ]
+    },
+    "till_totals": {
+      "title": "Kasa Toplamı",
+      "story": "Bir kafe günün satışlarını sırayla yazıyor; bir iade negatif bir satış olarak yazılır. Sahibi, her girişin o satış dahil o ana kadarki toplam olduğu ikinci bir liste istiyor. Satışsız bir gün boş bir liste verir.",
+      "hints": [
+        "Bir NEW LIST oluştur ve 0'dan başlayan bir ara toplam tut.",
+        "Her satışta önce satışı toplama ekle, sonra toplamı yeni listeye APPEND et.",
+        "İlk satışı da diğerleri gibi ele al: satışsız bir gün hata değil, boş bir liste vermeli."
+      ]
+    },
+    "balance_point": {
+      "title": "Denge Noktası",
+      "story": "Uzun bir kalasın üzerinde kasalar sıra hâlinde duruyor. Kalas, bir kasanın solundaki kasalar sağındaki kasalarla tam aynı ağırlıktaysa o kasanın üzerinde dengede durur; kasanın kendisi hiçbir tarafa sayılmaz ve boş bir taraf 0 ağırlığındadır. Kalasın dengede durduğu ilk kasanın konumunu 0'dan sayarak bildir; yoksa -1 bildir. Her kasa için iki tarafı yeniden toplamak en uzun sıralarda çok fazla adım sürer.",
+      "hints": [
+        "Sağdaki ağırlık, toplamdan sol tarafın ve kasanın kendisinin çıkarılmasıdır.",
+        "Her şeyi bir kez topla, sonra soldan yürürken sol tarafın ağırlığını tut.",
+        "Dengeyi, o anki kasayı sol tarafa eklemeden önce kontrol et; ilk kasanın sol tarafı boştur."
+      ]
+    },
+    "landslide": {
+      "title": "Ezici Zafer",
+      "story": "Her oy pusulasında bir adayın kayıt numarası yazıyor. Bir aday ancak tüm oyların yarısından fazlasını alırsa doğrudan kazanır. Doğrudan kazananı bildir; kimse yarıdan fazla almadıysa 0 bildir. Kayıt numaraları yüz binlere uzanıyor ve her oyu diğer her oyla karşılaştırarak saymak en büyük seçimlerde çok fazla adım sürer.",
+      "hints": [
+        "Farklı adaylara verilmiş oyları eşleştirip birbirini götürsün: yarıdan fazla oyu olan aday bu eşleştirmeden hep sağ çıkar.",
+        "Bir aday ve bir sayaç tut: tutulan adaya verilen oy 1 ekler, başka her oy 1 çıkarır; sayaç 0 olunca sıradaki oy yeni tutulan aday olur.",
+        "Sağ çıkmak yetmez: tutulan adayın oylarını ikinci bir geçişte say ve gerçekten yarıdan fazla olduğunu kontrol et."
+      ]
+    },
+    "second_scan": {
+      "title": "İkinci Okutma",
+      "story": "Bir kütüphane girişi, her ziyaretçinin kart numarasını sırayla kaydediyor. Bir kartın ikinci kez okutulduğu ilk anı bul: o okutmanın konumunu 0'dan sayarak bildir; her kart yalnızca bir kez okutulduysa -1 bildir.",
+      "hints": [
+        "Daha önce gördüğün her kartı hatırla.",
+        "Okutmaları sırayla dolaş: kart zaten NEW SET'inde varsa cevap bu okutmadır; yoksa onu ADD ile ekle.",
+        "Cevap, kayıtta ilk tekrar eden kart değil, en erken tekrar okutmadır: 5, 1, 2, 1, 5 için konum 3'tür."
+      ]
+    },
+    "matching_bags": {
+      "title": "Eşleşen Torbalar",
+      "story": "Numaralı bilyelerden oluşan iki torba geliyor. Torbalar tam olarak aynı bilyeleri içeriyorsa eşleşir: her numara iki torbada da aynı sayıda bulunur, sıra fark etmez. Torbalar eşleşiyor mu?",
+      "hints": [
+        "İlk torbada her numaradan kaç bilye olduğunu say.",
+        "Numaradan sayıya giden bir NEW MAP kullan: ilk torbanın her bilyesi için sayı + 1 PUT et, sonra ikinci torbanın her bilyesi için 1 çıkar.",
+        "Aynı numaralar yetmez: 1, 1, 2 ile 1, 2, 2 eşleşmez. LENGTH'i farklı torbalar hiç eşleşmez."
+      ]
+    },
+    "lonely_numbers": {
+      "title": "Yalnız Sayılar",
+      "story": "Bir çekiliş kutusunda bilet koçanları var ve bazı numaralar yanlışlıkla birden fazla kez basılmış. Kaç bilet numarası kutuda tam olarak bir kez geçiyor?",
+      "hints": [
+        "Her numaranın kaç kez geçtiğini say.",
+        "Numaradan sayıya giden bir NEW MAP bunu tek geçişte yapar; biletler üzerinde ikinci bir geçiş, sayısı 1 olanları sayar.",
+        "Üç kez basılmış bir numara da yalnız değildir: yalnızca görüldü ya da görülmedi değil, gerçek bir sayı tut."
+      ]
+    },
+    "sorted_shelf": {
+      "title": "Sıralı Raf",
+      "story": "Kütüphane kitapları bir rafta katalog numarasına göre sıralı duruyor ve aynı kitabın kopyaları yan yana duruyor. Rafta kaç farklı kitap var?",
+      "hints": [
+        "Kopyalar yan yana durduğu için yeni bir kitap tam olarak numaranın değiştiği yerde başlar.",
+        "Her kitabı hemen öncekiyle karşılaştır ve değişimleri say.",
+        "İlk kitap her zaman yeni sayılır; boş bir rafta 0 kitap vardır."
+      ]
+    },
+    "recipe_steps": {
+      "title": "Tarif Adımları",
+      "story": "Bir aşçı robot, yaptığı her adımın numarasını sırayla kaydediyor. Bir tarif, gereken adımları sırayla listeliyor. Arada başka adımlar olabilir, ama tarifin adımları kayıtta tarifin sırasıyla ve her biri ayrı bir kayıt olarak geçmeli. Robot tarife uydu mu?",
+      "hints": [
+        "Kaydı bir kez dolaş ve beklediğin sıradaki tarif adımını parmağınla işaretle.",
+        "Bir kayıt o adımla eşleşince parmağını tarifin bir sonraki adımına kaydır.",
+        "Parmak son adımı geçtiyse tarife uyulmuştur. Boş bir tarife her zaman uyulur; parmağın tarifin sonunu aşmamasına dikkat et."
+      ]
+    },
+    "every_rise": {
+      "title": "Her Yükseliş",
+      "story": "Bir yatırımcı aynı anda en fazla bir hisse tutabilir, ama istediği kadar alıp satabilir; aynı gün satıp yeniden alabilir de. Her günün hisse fiyatı verildiğinde en fazla ne kadar kâr edebilir? Fiyat yalnızca düşüyorsa en iyisi 0'dır.",
+      "hints": [
+        "Bir günden ertesi güne her yükseliş, önceki gün alıp o gün satarak yakalanabilir.",
+        "Bir günle önceki gün arasındaki her pozitif farkı topla.",
+        "Düşüşler ve değişmeyen günler bir şey katmaz; iki günden azsa kâr yoktur."
+      ]
+    },
+    "one_room": {
+      "title": "Tek Salon",
+      "story": "Bir konferansın tek salonu var. Her konuşmanın bir başlangıç ve bir bitiş dakikası var ve konuşmalar bitiş dakikasına göre, en erken biten önce olacak şekilde listelenmiş. Bir konuşma, seçilmiş konuşmalarla çakışmıyorsa yapılabilir; bir konuşma öncekinin bittiği dakikada başlayabilir. Salonda en fazla kaç konuşma yapılabilir?",
+      "hints": [
+        "Hâlâ sığan konuşmalar arasında en erken biteni tutmak, geri kalanlara en çok yeri bırakır.",
+        "Konuşmaları verilen sırayla dolaş ve son seçilen konuşmanın ne zaman bittiğini hatırla; bundan önce başlamayan konuşmayı al.",
+        "Önceki konuşmanın bittiği anda başlamak serbest, bu yüzden GREATER OR EQUAL ile karşılaştır."
+      ]
+    },
+    "medal_row": {
+      "title": "Madalya Sırası",
+      "story": "Koşucular, her biri kendi yarış süresiyle, bir sıra hâlinde duruyor. Her koşucu en az bir madalya alır. Hemen yanında duran bir komşusundan daha hızlı (süresi daha küçük) olan koşucu, o komşudan daha fazla madalya almalıdır; eşit süreler bir şey gerektirmez. En az kaç madalya dağıtılmalı?",
+      "hints": [
+        "Herkese 1 madalya ver, sonra kuralı her seferinde bir taraf için düzelt.",
+        "Soldan sağa: solundakinden hızlı olan koşucu o komşudan bir fazla alır. Sonra sağdan sola: sağındakinden hızlı olan koşucu o komşudan fazlasına ihtiyaç duyar; iki sayıdan büyük olanı tut.",
+        "Madalyaları APPEND ile kurulan bir NEW LIST içinde tut; ikinci geçiş bir sayıyı yalnızca artırabilir, asla azaltamaz."
+      ]
+    },
+    "calm_stretches": {
+      "title": "Sakin Aralıklar",
+      "story": "Bir yürüyüşçü, günlük yağış kaydına bakarak yürüyüş planlıyor. Sakin aralık, yağışları toplamı en fazla sınır kadar olan bir ya da daha çok ardışık gündür. Kayıtta kaç sakin aralık var? Üst üste binen aralıklar ayrı sayılır. Her aralığı tek tek denemek en uzun kayıtlarda çok fazla adım sürer.",
+      "hints": [
+        "Bir aralık sakinse, aynı günde biten her daha kısa aralık da sakindir.",
+        "Sol kenarı ve toplamı olan bir pencere tut: yeni günü ekle, sonra toplam sınırın üstünde olduğu sürece (WHILE) soldan gün çıkar.",
+        "Sol kenardan bugüne kadar her başlangıç günü bir sakin aralık verir: bugün MINUS sol PLUS 1 ekle. Tek başına sınırın üstündeki bir gün boş bir pencere bırakır."
+      ]
+    },
+    "window_variety": {
+      "title": "Pencere Çeşitliliği",
+      "story": "Bir radyo istasyonu her kuşakta çalan şarkıyı kaydediyor. Program yöneticisi, ilkinden sonuncusuna kadar art arda k kuşaktan oluşan her dizide kaç farklı şarkı olduğunu istiyor. k'dan az kuşak varsa liste boştur. Her diziyi baştan saymak en uzun kayıtlarda çok fazla adım sürer.",
+      "hints": [
+        "Bir sonraki diziye geçmek sağa bir kuşak ekler ve soldan bir kuşak çıkarır.",
+        "Şarkıdan o anki dizide kaç kez çaldığına giden bir NEW MAP ve sayısı 0'dan büyük olan şarkıların sayısını tut.",
+        "Bir şarkının sayısı 0'a düştüğünde diziden çıkmıştır: onu sayıdan düş. İlk dizi tamamlanınca sayıyı APPEND et."
+      ]
+    },
+    "plate_minimum": {
+      "title": "Tabak Minimumu",
+      "story": "Bir mutfakta tek bir tabak yığını var. Pozitif bir sayı o boyda bir tabağı en üste koyar; 0 en üstteki tabağı alır (boş yığından asla). Bulaşıkçı her hamleden sonra yığında kalan en küçük tabağın boyunu, yığın boşsa 0'ı istiyor. Bu boyları her hamle için bir tane olacak şekilde listele.",
+      "hints": [
+        "Bir tabak alındığında en küçük tabak eski hâline dönebilir; bu yüzden her yükseklikteki en küçük tabağı hatırla.",
+        "Bir \"şimdiye kadarki en küçük\" yığını tut: bir tabak konunca tabakla o anki en küçüğün MIN'ini PUSH et.",
+        "Bir tabak alınınca o yığını da POP et; PEEK o anki en küçüğü verir, boş yığın 0 bildirir."
+      ]
+    },
+    "snowball_clash": {
+      "title": "Kartopu Çarpışması",
+      "story": "Kartopları dar bir patikada, hepsi aynı hızla yuvarlanıyor. Pozitif bir sayı sağa yuvarlanan o boyda bir topu, negatif bir sayı ise boyu eksisiz yazılmış, sola yuvarlanan bir topu gösterir. Sağa giden bir top sola giden bir topla karşılaşınca küçüğü kırılır; eşit boydakilerin ikisi de kırılır. Aynı yöne giden toplar asla karşılaşmaz. Tüm karşılaşmalar bitince kaç top kalır?",
+      "hints": [
+        "Yalnızca sağa giden bir top, kendisinden sonra gelen sola giden bir topla karşılaşabilir; bu yüzden oyunda kalan sağa gidenleri bir yığında tut.",
+        "Sola giden bir top, yığının tepesindeki daha küçük sağa gidenleri art arda kırar (WHILE); daha büyük ya da eşit birine rastlayana ya da yığın boşalana kadar.",
+        "Eşit boylar birbirini kırar; yığını temizleyen sola giden top güvenle uzaklaşır ve sayılır. Yığında kalan toplar da sayılır."
+      ]
+    },
+    "kth_from_end": {
+      "title": "Sondan Saymak",
+      "story": "Bir yük treni, her birinin bir yük numarası olan vagonlardan oluşan bir zincir; tren yalnızca önden dolaşılabilir. Arkadan sayınca k'ıncı vagonun yük numarasını bildir (son vagon 1'dir); trende k'dan az vagon varsa -1 bildir.",
+      "hints": [
+        "Önce bir öncü parmağı k vagon ileri gönder; sondan düşerse tren çok kısadır.",
+        "Sonra ikinci bir parmağı önden, öncüyle birlikte birer vagon ilerlet; öncü sondan düşene kadar.",
+        "İkinci parmak artık arkadan k'ıncı vagondadır. k vagon sayısına eşitse bu ilk vagondur."
+      ]
+    },
+    "no_repeats": {
+      "title": "Tekrar Yok",
+      "story": "Bir trenin vagonları numaralı kasalar taşıyor ve tren, eşit numaralar yan yana duracak şekilde sıralı. Önündeki vagonun numarasını tekrarlayan her vagonu ayır ki her numara bir kez geçsin, sonra treni döndür. Boş bir tren boş kalır.",
+      "hints": [
+        "Treni tek parmakla dolaş ve her vagonu hemen arkasındaki vagonla karşılaştır.",
+        "Sonraki vagon numarayı tekrarlıyorsa şu anki vagonun SET NEXT'ini ondan sonraki vagona bağla ve yerinde kal: yeni komşu da numarayı tekrarlıyor olabilir.",
+        "Yalnızca sonraki vagonun numarası farklıysa ya da sonraki vagon yoksa ilerle."
+      ]
+    },
+    "mirror_tree": {
+      "title": "Ayna Ağaç",
+      "story": "Bir bahçıvan bir ağacı aynada aynı görünecek biçimde budamış: sol taraf, dal dal ve aynı etiketlerle, sağ tarafın ters çevrilmişi. Ağaç aynada aynı görünüyor mu? Boş bir ağaç görünür.",
+      "hints": [
+        "Sol dalı sağ dalla ayna görüntüsü olarak karşılaştır: dış dış ile, iç iç ile.",
+        "Karşılaştırılacak dallar için iki yığın tut; eksik bir dal da yığına konabilir. Eşleşen bir çiftten sonra birincinin LEFT'ini ikincinin RIGHT'ı ile, RIGHT'ını da diğerinin LEFT'i ile PUSH et.",
+        "Bir tarafı IS NOTHING olup diğeri olmayan ya da etiketleri farklı bir çift aynayı bozar; iki eksik dal eşleşir."
+      ]
+    },
+    "range_count": {
+      "title": "Katalog Aralığı",
+      "story": "Bir kütüphane kataloğu bir arama ağacı olarak saklanıyor: bir düğümün sol dalındaki her etiket düğümün etiketinden küçük, sağ dalındaki her etiket ise büyük. low ile high arasında, ikisi de dahil, kaç etiket var? Her düğümü ziyaret etmek en büyük kataloglarda çok fazla adım sürer; ağacın düzeni hangi dalların atlanabileceğini söyler.",
+      "hints": [
+        "Etiketi low'un üstünde olmayan bir düğümün LEFT'inde işe yarar bir şey yoktur; etiketi high'ın altında olmayan bir düğümün RIGHT'ında da.",
+        "Ağacı bir yığınla dolaş ve yalnızca aralıkta etiket barındırabilecek bir dalı PUSH et.",
+        "İki uç da sayılır: low'a ya da high'a eşit bir etiket aralığın içindedir."
+      ]
+    },
+    "ring_road": {
+      "title": "Çevre Yolu",
+      "story": "Bir ilçenin köylerini yollar birbirine bağlıyor. Her yol iki yönde de kullanılabiliyor ve bağladığı iki köyün listesinde de geçiyor; hiçbir yol bir köyü kendine bağlamıyor ve hiçbir iki yol aynı çifti bağlamıyor. Bir çevre yolu var mı: bir köyden çıkıp hiçbir yolu iki kez kullanmadan ona geri dönmenin bir yolu? Bazı köyler diğerlerine bağlı olmayabilir.",
+      "hints": [
+        "Halkası olmayan, v köylü bağlı bir parçada tam olarak v − 1 yol vardır.",
+        "Her parçayı bir yığınla dolaş; köylerini ve yol listelerindeki kayıtları say (her yol iki kez listelenir).",
+        "Yol sayısı köy sayısı kadar ya da fazla olan bir parçada halka vardır. Yalnızca ilkini değil, her parçayı kontrol et."
+      ]
+    },
+    "hop_radius": {
+      "title": "Yolculuk Sınırı",
+      "story": "Bir ulaşım kartı en fazla belirli sayıda yolculuğa izin veriyor ve yolculuklar listelenen bağlantılar boyunca tek yönlü. En fazla o kadar yolculukla başlangıçtan kaç istasyona ulaşılabilir? Başlangıç da sayılır; 0 yolculukla yalnızca o vardır.",
+      "hints": [
+        "Başlangıçtan halka halka keşfet: önce bir yolculuk uzaktaki istasyonlar, sonra iki yolculuk, ve böyle devam.",
+        "Bir kuyruk ve -1 ile başlayan, istasyon başına yolculuk sayısını tutan bir NEW LIST her istasyonun en az yolculuk sayısını verir.",
+        "Zaten sınırda olan bir istasyondan devam etme; sonra ulaşılan istasyonları say."
+      ]
+    },
+    "best_stretch": {
+      "title": "En İyi Dönem",
+      "story": "Bir pazar tezgâhı her günün kârını kaydediyor; zarar edilen günde kâr negatiftir. Bir ya da daha fazla ardışık günden oluşan en iyi dönemi bul: bir dönemin ulaşabileceği en büyük toplamı. Her gün zarar edilmiş olsa bile sahibi en iyi dönemi istiyor; o zaman bu, en küçük tek günlük zarardır.",
+      "hints": [
+        "Belirli bir günde biten en iyi dönem ya o gün yeniden başlar ya da önceki günde biten en iyi dönemi uzatır.",
+        "Bu toplamı günün tek başına değeri ile gün PLUS dünkü toplamın MAX'ıyla tut; genel en iyiyi de tut.",
+        "İkisini de 0'dan değil ilk günden başlat: yalnızca zarar varken 0 kimsenin sahip olabileceği bir dönem değildir."
+      ]
+    },
+    "rising_line": {
+      "title": "Yükselen Sıra",
+      "story": "İnsanlar, her biri kendi boyuyla, tek tek bir kuyruğa giriyor. Bir fotoğrafçı, kuyruğun sırasını koruyarak bazılarını seçmek istiyor; öyle ki boylar önden arkaya kesinlikle yükselsin. Seçilebilecek en büyük grup kaç kişidir? Eşit boylar yükselmiş sayılmaz; boş bir kuyruk 0 verir.",
+      "hints": [
+        "Her kişi için, o kişiyle biten en büyük yükselen grubu bul.",
+        "Bu, kendisinden önce gelen ve kesinlikle daha kısa olanların en iyisine PLUS 1'dir; bu sayıları bir NEW LIST içinde tut.",
+        "Cevap o listedeki en büyük sayıdır. En son seçilenden uzun olan herkesi almak yetmez."
+      ]
+    },
+    "coin_stack": {
+      "title": "Jeton Yığını",
+      "story": "Yukarıdan aşağıya listelenmiş bir jeton yığınını hiç döngü kullanmadan topla. sum_from(stack, i) fonksiyonu, i konumundan en alta kadar olan jetonların toplamını verir: i'nci jeton artı onun altındaki jetonların toplamı. Son jetondan sonra eklenecek bir şey yoktur. Program yığının tamamının toplamını döndürür.",
+      "hints": [
+        "Bir FUNCTION, problemin daha küçük bir parçası için kendini CALL ile çağırabilir: i'nin altındaki jetonlar daha küçük bir yığındır.",
+        "sum_from(stack, i), i'nci jeton PLUS CALL sum_from(stack, i PLUS 1) olur.",
+        "i yığının LENGTH'ine ulaşınca dur ve orada RETURN 0 yap; boş bir yığının son jetonu yoktur. Program RETURN CALL sum_from(coins, 0) yapar."
+      ]
+    },
+    "tree_total": {
+      "title": "Ağaç Toplamı",
+      "story": "Bir ağacın her düğümünde, bazıları negatif olan bir sayı var. Hepsini total(node) fonksiyonuyla topla: boş bir dal 0 ekler, bir düğüm de kendi sayısını iki dalının toplamına ekler.",
+      "hints": [
+        "Döngüye gerek yok: iki dal da daha küçük ağaçlardır, bu yüzden her biri için total'ı CALL ile çağır.",
+        "IF node IS NOTHING ise RETURN 0; değilse RETURN NODE VALUE PLUS LEFT ve RIGHT'ın toplamları.",
+        "LEFT dal eksik olsa bile iki dal da önemlidir."
+      ]
+    },
+    "even_branches": {
+      "title": "Dengeli Dallar",
+      "story": "Bir ağaç, her düğümünde iki dalının seviye sayıları en fazla 1 farklıysa dengeli büyümüştür (boş bir dalın 0 seviyesi vardır). Ağacın tamamı dengeli büyümüş mü? levels(node) fonksiyonu bir dalın seviye sayısını verir; içindeki bir düğüm dengesizse hemen -1 verir.",
+      "hints": [
+        "Her dala seviyesini sor; biri -1 derse cevap da -1 olur.",
+        "Değilse, ikisi 1'den fazla farklıysa (farkın ABSOLUTE değeri) RETURN -1; yoksa RETURN 1 PLUS büyük olan.",
+        "levels(root) -1'e NOT EQUAL ise ağaç dengelidir. Yalnızca kökün iki dalını karşılaştırmak, daha derindeki dengesiz bir düğümü kaçırır."
+      ]
+    },
+    "exact_weight": {
+      "title": "Tam Ağırlık",
+      "story": "Bir terazi tam olarak hedef ağırlığı göstermeli. Verilen ağırlıklardan, toplamı tam hedefe eşit olan farklı seçimleri say; her ağırlık en fazla bir kez kullanılır ve farklı konumdaki ağırlıklar eşit olsalar bile farklı sayılır. Hiçbir şey seçmemek 0 ağırlık eder.",
+      "hints": [
+        "Her ağırlık bir seçimdir: bırak ya da al. ways(w, i, rest), i'nci ağırlıktan itibaren kalanı tamamlayan seçimleri sayar.",
+        "ways(w, i, rest) = ways(w, i PLUS 1, rest) PLUS ways(w, i PLUS 1, rest MINUS i'nci ağırlık).",
+        "Kararı yalnızca sonda ver (i LENGTH'e EQUAL olunca): hiçbir şey kalmadıysa 1, yoksa 0. Kalan biter bitmez durmak, 0 ağırlıkları da alan seçimleri kaçırır."
+      ]
+    },
+    "change_ways": {
+      "title": "Para Üstü Yolları",
+      "story": "Bir kasada birkaç farklı değerde jeton var, her birinden gerektiği kadar. Kasa tutarı tam olarak kaç farklı şekilde ödeyebilir? Aynı jetonları başka bir sırayla kullanan iki yol aynı yoldur. 0 ödemenin tam bir yolu vardır: hiç jeton vermemek.",
+      "hints": [
+        "Sıraları saymamak için jeton değerlerini birer birer belirle: önce i değerinden kaç tane, sonra kalanı sonraki değerlerden.",
+        "pay(c, i, rest) = pay(c, i, rest MINUS i'nci jeton), i'nci jetonu bir kez daha kullanarak, PLUS pay(c, i PLUS 1, rest), i'nci jetondan başka kullanmadan.",
+        "Kalan 0 ise 1 yol; kalan 0'ın altındaysa ya da jeton değeri kalmadıysa 0 yol."
+      ]
+    },
+    "watchtowers": {
+      "title": "Gözcü Kuleleri",
+      "story": "Kare bir haritada n satır ve n sütun var. Üzerine her satıra bir tane olmak üzere n gözcü kulesi yerleştir; hiçbir iki kule aynı sütunu ya da aynı çaprazı paylaşmasın. Bu kaç farklı şekilde yapılabilir?",
+      "hints": [
+        "Satırları yukarıdan doldur. place(row, size, cols), üstteki satırların kuleleri cols'ta listelenen sütunlarda dururken yerleştirmeyi bitirmenin yollarını sayar.",
+        "Bu satırda her c sütununu dene: daha önceki hiçbir kule c sütununda değilse ve hiçbiri satır farkı kadar sütun uzakta değilse (çapraz) güvenlidir. Güvenliyse c'yi APPEND et, CALL place(row PLUS 1, size, cols) ekle, sonra kuleyi geri almak için son konumu REMOVE AT ile sil.",
+        "row size'a EQUAL olunca her kule yerindedir: bu 1 yoldur. Program bir NEW LIST ile başlar ve CALL place(0, n, o liste) yapar."
+      ]
+    },
+    "digit_root": {
+      "title": "Rakam Kökü",
+      "story": "Bir sayının rakamlarını topla, sonra o toplamın rakamlarını, ve böyle tek bir rakam kalana kadar devam et. İki fonksiyon bunu hiç döngü kullanmadan yapar: digits(m), m'nin rakamlarını bir kez toplar; root(m) ise m tek bir rakam olana kadar devam eder.",
+      "hints": [
+        "Her fonksiyon kendini CALL ile çağırır: digits son rakamı atılmış sayı için, root rakam toplamı için.",
+        "digits(m): IF m EQUAL 0 ise RETURN 0; değilse RETURN m REMAINDER 10 PLUS CALL digits(m FLOOR DIVIDE 10).",
+        "root(m): 10'dan küçük (LESS THAN) bir sayı zaten tek rakamdır; değilse RETURN CALL root(CALL digits(m)). Dikkat: 10 iki rakamlıdır."
+      ]
+    },
+    "lucky_picks": {
+      "title": "Şanslı Kartlar",
+      "story": "Bir piyango kartı, 1'den 9'a kadar, toplamı tam olarak hedefe eşit k farklı rakam istiyor. Sıra önemli değil: 2 ve 7, 7 ve 2 ile aynı karttır. Kaç farklı kart vardır? pick(low, left, rest), her biri en az low olan ve hepsi farklı, toplamı rest olan left tane rakam daha seçmenin yollarını sayar.",
+      "hints": [
+        "Rakamları küçükten büyüğe seç; böylece her kart bir kez sayılır.",
+        "pick(low, left, rest): low'dan 10'a kadar (yani 9'a kadar) her d rakamı için (FOR … FROM … TO) CALL pick(d PLUS 1, left MINUS 1, rest MINUS d) ekle.",
+        "Seçilecek rakam kalmadıysa, rest 0 ise 1 yol, değilse hiç yol yoktur. Bir sonraki seçime d PLUS 1 yerine d ile başlamak bir rakamın tekrar seçilmesine izin verir."
+      ]
+    },
+    "lantern_rows": {
+      "title": "Fener Sırası",
+      "story": "n fenerden oluşan bir sıradaki her fener açık ya da kapalı olabilir, ama yan yana iki fener asla ikisi birden açık olamaz. Kaç farklı desene izin var? Boş bir sıranın tek bir deseni vardır: hiçbir şey. rows(left, on), yerleştirilecek fenerler için desenleri sayar; on, son yerleştirilen fenerin açık olup olmadığını söyler.",
+      "hints": [
+        "Fenerleri tek tek yerleştir; sırada ne gelebileceği yalnızca kaç tane kaldığına ve son fenerin açık olup olmadığına bağlıdır.",
+        "Kapalı bir fener her zaman sığar: CALL rows(left MINUS 1, FALSE). Açık bir fener yalnızca kapalı birinin ardından sığar: CALL rows(left MINUS 1, TRUE).",
+        "Fener kalmadığında tam 1 desen vardır: 1'de değil 0'da dur, yoksa boş bir sıra hiç bitmez. Program rows(n, FALSE) sorar."
+      ]
+    },
+    "catalogue_check": {
+      "title": "Katalog Denetimi",
+      "story": "Bir arama ağacı düzenini her yerde korumalıdır: bir düğümün sol dalındaki her etiket düğümün etiketinden küçük, sağ dalındaki her etiket ise büyüktür. Yalnızca çocuklar değil, hepsi. Etiketler 1'den 1000'e kadar farklı tam sayılardır. Ağaç düzenli mi? ok(node, low, high), bu daldaki her etiketin low ile high arasında (ikisi hariç) olup olmadığını söyler.",
+      "hints": [
+        "Kök 1'den 1000'e kadar herhangi bir etiket olabilir: ok(root, 0, 1001) ile başla.",
+        "Bir düğüm low ile high arasında olmalı; sonra LEFT dalı low ile düğümün etiketi arasında, RIGHT dalı da etiket ile high arasında olmalıdır.",
+        "Bir düğümü yalnızca kendi çocuklarıyla karşılaştırmak, kökün yanlış tarafındaki bir torunu kaçırır."
+      ]
+    },
+    "island_size": {
+      "title": "Ada Büyüklüğü",
+      "story": "Bir harita, kara (1) ve su (0) karelerinden oluşan bir ızgaradır. Yan yana değen kara kareleri (köşeden köşeye değil) aynı adaya aittir. Verilen satır ve sütundaki ada ne kadar büyük? Su üzerindeyse cevap 0'dır. fill(g, r, c), r, c karesinden ulaşılabilen ve henüz sayılmamış karayı sayar; saydığı her kareyi suya çevirerek işaretler.",
+      "hints": [
+        "Bir kare bir kez sayılmalı: bir kara karesini saydıktan sonra onu SET ELEMENT ile 0 yap ki başka bir yol onu tekrar saymasın.",
+        "fill(g, r, c): haritanın dışı ya da su 0'dır. Değilse kareyi işaretle, sonra RETURN 1 PLUS dört komşunun fill'i: bir satır aşağı, bir yukarı, bir sütun sağ, bir sol.",
+        "Komşuları CALL ile çağırmadan önce işaretle, yoksa birbirlerine geri gönderip dururlar. Yalnızca köşeden değen kareler komşu değildir."
+      ]
+    },
+    "power_steps": {
+      "title": "Kuvvet Basamakları",
+      "story": "Bir hesap makinesi yalnızca son dört rakamı gösteriyor. base'in exp'inci kuvveti için ne gösterir? Her sayının 0'ıncı kuvveti 1 gösterir. exp kez çarpmak devasa üsler için çok fazla adım sürer: çift bir üs yarıya bölünebilir, çünkü b'nin 2k'ncı kuvveti, b'nin k'ncı kuvvetinin kendisiyle çarpımıdır.",
+      "hints": [
+        "Her çarpmadan sonra yalnızca son dört rakamı tut: REMAINDER 10000.",
+        "power(b, e): e 0 ise 1; çift e için power(b, e FLOOR DIVIDE 2)'nin karesi; tek e için b TIMES power(b, e MINUS 1).",
+        "Yarıyı bir değişkene SET et ve kendisiyle çarp: aynı yarı için power'ı iki kez CALL etmek, adım adım çarpmak kadar yavaştır."
+      ]
+    },
+    "rabbit_months": {
+      "title": "Tavşan Ayları",
+      "story": "Bir tavşan çiftliği çiftleri ay ay sayıyor: 0. ayda 0 çift, 1. ayda 1 çift vardı ve sonraki her ayda, önceki iki ayın toplamı kadar çift olur. n. ayda kaç çift vardır? Her seferinde önceki iki ayı soran bir fonksiyon aynı işi tekrar tekrar yapar; her cevabı ilk bulduğunda memo haritasında hatırla.",
+      "hints": [
+        "pairs(month), pairs(month MINUS 1) PLUS pairs(month MINUS 2)'dir; 0. ve 1. aylar verilmiştir.",
+        "Bir şey hesaplamadan önce memo'ya bak: month'u ondan GET et; IS NOT NOTHING ise cevap zaten biliniyordur.",
+        "Hesapladıktan sonra RETURN etmeden önce onu memo'ya PUT et. Program bir NEW MAP verir; her CALL aynı haritayı paylaşır."
+      ]
+    },
+    "maze_paths": {
+      "title": "Labirent Yolları",
+      "story": "Bir labirent, açık karelerden (1) ve duvarlardan (0) oluşan bir ızgaradır. Sol üst kareden sağ alt kareye, her adımda yukarı, aşağı, sola ya da sağa bir kare giderek ve bir yürüyüşte aynı kareye asla iki kez basmadan kaç farklı yürüyüş vardır? walk(g, r, c), r, c karesinden sona kadar olan yürüyüşleri sayar; o ana kadarki yürüyüşün karelerini duvar olarak işaretler.",
+      "hints": [
+        "Her karede dört yönü de dene. O anki yürüyüşteki bir kareye yeniden basılmamalı: üzerindeyken onu duvar olarak işaretle (SET ELEMENT ile 0).",
+        "walk(g, r, c): dışarısı ya da duvar 0'dır; sağ alt kare 1 yürüyüştür. Değilse kareyi işaretle, dört komşu için walk'ları topla, sonra toplamı RETURN et.",
+        "RETURN etmeden önce kareyi SET ELEMENT ile yeniden 1 yap: başka bir yürüyüş daha sonra oradan geçebilir. Bunu unutmak yürüyüş kaybettirir."
+      ]
+    },
+    "seating_plan": {
+      "title": "Oturma Planı",
+      "story": "0'dan başlayarak numaralanmış misafirler bir sıraya, her biri bir sandalyeye oturuyor. Bazıları küs: a ve b misafirleri yan yana oturamıyorsa clash[a][b] 1'dir (o zaman clash[b][a] da 1'dir). Kaç farklı oturma sırası vardır? 0 ile 1'in küs olduğu üç misafirde yalnızca 0 2 1 ve 1 2 0 olur: 2 sıra. seat(table, last, used), last misafiri az önce oturmuşken hâlâ ayakta olan herkesi oturtmanın yollarını sayar; table, aktarılan küslük tablosudur ve used[g], oturmuş bir misafir için 1'dir.",
+      "hints": [
+        "Program her misafiri ilk oturan olarak dener: oturanlar listesindeki yerini SET ELEMENT ile 1 yapar, seat'i CALL ile çağırır, sonra yeniden 0 yapar.",
+        "seat: hâlâ ayakta olan her g misafiri için (FOR), IF table[last][g] 0 ise g'yi oturt (SET ELEMENT ile used[g] = 1), CALL seat(table, g, used) sonucunu sayıya ekle ve g'yi yeniden ayağa kaldır (SET ELEMENT ile used[g] = 0).",
+        "Giderken ayakta kalanları say: IF ayakta kimse yoksa herkes oturmuştur ve bu 1 sıradır. Sırası bittikten sonra oturmaya devam eden bir misafir, sonraki bütün sıralardan eksik kalır."
+      ]
+    },
+    "top_scores": {
+      "title": "En İyi Skorlar",
+      "story": "Skor tablosu gecenin en iyi k skorunu toplar. k'dan az skor geldiyse hepsini toplar. MAX öncelik kuyruğunun tepesinde hep en büyük sayı durur: bütün skorları içine koy, sonra k kez TAKE TOP yap.",
+      "hints": [
+        "SET best TO NEW MAX HEAP yap, sonra her skor için (FOR EACH) onu best'e INSERT et.",
+        "FOR i FROM 0 TO k ile toplama TAKE TOP best ekle: önce en büyük skor çıkar, sonra bir sonraki.",
+        "Boş öncelik kuyruğunda TAKE TOP hatadır. Skorlar k'dan önce biterse, IF best IS EMPTY ise eklemeyi bırak."
+      ]
+    },
+    "ticket_order": {
+      "title": "Bilet Sırası",
+      "story": "Bir makine numaralı biletleri karışık sırayla basıyor. Onları sırayla, en küçük numaradan başlayarak dağıt. 1500 bilet olabilir: kalan biletlerin hepsine bakıp en küçüğünü tekrar tekrar aramak çok fazla adım sürer. MIN öncelik kuyruğu en küçük sayısını tek adımda geri verir.",
+      "hints": [
+        "Her bileti bir NEW MIN HEAP'e INSERT et.",
+        "WHILE NOT (waiting IS EMPTY) iken, TAKE TOP waiting'i döndüreceğin listeye APPEND et.",
+        "Her TAKE TOP, kaç bilet beklerse beklesin tek adımdır; en küçüğü aramak ise bilet başına bir adımdır."
+      ]
+    },
+    "rope_joining": {
+      "title": "Halat Birleştirme",
+      "story": "Bir denizci halatları ikişer ikişer birleştirip tek uzun halat yapıyor. İki halatı birleştirmek, uzunluklarının toplamı kadar tutar ve yeni halat yeniden birleştirilebilir. En ucuz toplam maliyet nedir? 1, 1, 1 ve 1'i her seferinde en kısa ikisini birleştirerek bağlamak 8 tutar (2, 2, sonra 4); ama art arda bağlamak 9 tutar (2, 3, 4).",
+      "hints": [
+        "Uzun halatlar olabildiğince az birleştirilmeli; bu yüzden her seferinde o anki en kısa iki halatı birleştir.",
+        "Halatları bir NEW MIN HEAP içinde tut. SIZE GREATER THAN 1 iken (WHILE): iki kez TAKE TOP yap, ikisini maliyete ekle ve birleşen halatı geri INSERT et.",
+        "Birleşen halat öncelik kuyruğuna geri döner: bir sonraki seferde en kısa iki halattan biri olabilir."
+      ]
+    },
+    "last_stone": {
+      "title": "Son Taş",
+      "story": "Taşlar ikişer ikişer, her seferinde en ağır iki taş olmak üzere birbirine vurulur. Ağırlıkları aynıysa ikisi de yok olur; değilse hafif olan yok olur, ağır olan da o kadar hafifleyip geri döner. Son taş ne kadar ağırdır? Hiç taş kalmadıysa cevap 0'dır.",
+      "hints": [
+        "Taşları bir NEW MAX HEAP içinde tut; en ağırı hep tepede olsun.",
+        "En az iki taş varken (WHILE): iki kez TAKE TOP yap, önce x sonra y; IF x, y'den büyükse (GREATER THAN) x MINUS y'yi INSERT et.",
+        "Bittiğinde bir taş kalır ya da hiç kalmaz. IF öncelik kuyruğu IS EMPTY ise RETURN 0; boş öncelik kuyruğunun TOP'una bakmak hatadır."
+      ]
+    },
+    "seat_desk": {
+      "title": "Koltuk Masası",
+      "story": "Bir masa 1'den başlayarak numaralanmış koltukları dağıtıyor. Her istek bir sayıdır: 0 \"bana bir koltuk ver\" demektir ve masa boştaki en küçük numaralı koltuğu verir; başka bir sayı geri verilen bir koltuktur ve o koltuk yeniden boştur. Masa hangi koltukları hangi sırayla verir? 3 koltuk ve 0 0 1 0 isteklerinde 1 ve 2'yi verir, 1'i geri alır ve 1'i yeniden verir: 1 2 1.",
+      "hints": [
+        "Boş koltukları bir NEW MIN HEAP içinde tut: başta 1'den seats'e kadar bütün koltukları koy.",
+        "Her istek için (FOR EACH): IF 0 ise TAKE TOP free'yi listeye APPEND et; ELSE geri gelen koltuğu INSERT et.",
+        "Geri gelen bir koltuk daha yüksek numaralılardan önce verilmeli: yukarı doğru saymak onu hiç fark etmez."
+      ]
+    },
+    "meeting_rooms": {
+      "title": "Toplantı Odaları",
+      "story": "Toplantılar başlama saatine göre sıralı: i. toplantı starts[i]'den ends[i]'ye kadar sürer. Bir oda, toplantısı biter bitmez yeniden boştur; yani bir toplantı, bir odada başka bir toplantının bittiği dakikada başlayabilir. Bütün toplantılar için kaç oda gerekir?",
+      "hints": [
+        "Odalardaki toplantıların bitiş saatlerini bir NEW MIN HEAP içinde tut: TOP, ilk boşalacak odadır.",
+        "Her toplantı için, IF NOT (ending IS EMPTY) AND TOP ending başlangıçtan küçük ya da eşitse (LESS OR EQUAL) o oda boştur: onu TAKE TOP ile al. Sonra toplantının bitişini INSERT et.",
+        "Sonda kullanımda olan odalar, gereken bütün odalardır: öncelik kuyruğunun SIZE'ını RETURN et. Bir toplantının bittiği anda başlayan toplantıya yeni oda gerekmez."
+      ]
+    },
+    "podium_place": {
+      "title": "Kürsü Sırası",
+      "story": "Uzun bir yarış süreleri listesi tek tek geliyor. k. en büyük hangisi? Küçük bir ekran cevabı güncel tutuyor, ama yalnızca 100 bellek hücresi var ve 300 ölçüm gelebilir: hepsini tutamaz. Şimdiye kadarki en büyük k ölçümü tut, yeter.",
+      "hints": [
+        "Şimdiye kadarki en büyük k ölçümü bir NEW MIN HEAP içinde tut: TOP'u bunların en küçüğüdür, yani k. en büyük.",
+        "Her ölçümü INSERT et; IF öncelik kuyruğunun SIZE'ı artık k'dan büyükse (GREATER THAN), en küçüğü atmak için TAKE TOP yap.",
+        "Sonda TOP'u RETURN et. Bütün ölçümleri tutan bir MAX öncelik kuyruğu doğru cevabı verir, ama her ölçüm için bir hücre ister."
+      ]
+    },
+    "running_median": {
+      "title": "Akan Ortanca",
+      "story": "Sayılar birer birer geliyor. Her birinden sonra şimdiye kadarki bütün sayıların ortancasını söyle: sıralı hâldeki ortadaki sayı, sayı adedi çiftse ortadaki iki sayının küçüğü. 1500 sayı gelebilir; hepsini sıralı tutmak çok fazla adım tutar. İki öncelik kuyruğu ortayı el altında tutar: küçük yarı bir MAX, büyük yarı bir MIN öncelik kuyruğunda.",
+      "hints": [
+        "low küçük yarı için bir NEW MAX HEAP, high büyük yarı için bir NEW MIN HEAP olsun. Ortanca TOP low'dur.",
+        "Yeni sayı, IF low IS EMPTY OR sayı TOP low'dan küçük ya da eşitse (LESS OR EQUAL) low'a girer; ELSE high'a.",
+        "Sonra dengele: IF low'da high'dan birden fazla sayı fazlaysa TAKE TOP low'u high'a taşı; IF high'da low'dan fazla sayı varsa TAKE TOP high'ı low'a taşı. Sonra TOP low'u APPEND et."
+      ]
+    },
+    "halving_piles": {
+      "title": "Yarıya İnen Yığınlar",
+      "story": "Taş yığınları var. Her turda en büyük yığını al ve yarısını, aşağı yuvarlayarak, kaldır: 9'luk bir yığın 5 olur. k turdan sonra toplam kaç taş kalır? En büyük yığın daha önce yarıladığın bir yığın olabilir.",
+      "hints": [
+        "Yığınları bir NEW MAX HEAP içinde tut: TOP hep en büyük yığındır.",
+        "Her turda: en büyüğü TAKE TOP ile al, sonra ondan kalanı INSERT et: yığın MINUS (yığın FLOOR DIVIDE 2).",
+        "Sonda, öncelik kuyruğu boş değilken (WHILE … NOT … IS EMPTY) her yığını TAKE TOP ile al ve topla."
+      ]
+    },
+    "deadline_jobs": {
+      "title": "Son Tarihli İşler",
+      "story": "Bir işçi günde bir iş yapabilir: 1., 2., 3. gün ve böyle devam eder. i. iş pays[i] öder, ama yalnızca deadlines[i]. günde ya da daha önce yapılırsa; işler son tarihe göre sıralıdır. İşçi en fazla ne kazanabilir? Son tarihleri 1 1 ve ücretleri 3 7 olan iki işte tek işe vakit var: 7'yi al.",
+      "hints": [
+        "İşleri son tarihe göre dolaş ve yapmayı planladığın işlerin ücretlerini bir NEW MIN HEAP içinde tut.",
+        "Her işin ücretini INSERT et. IF planlanan iş sayısı artık bu son tarihe kadarki gün sayısından fazlaysa (SIZE GREATER THAN son tarih), en az ödeyeni atmak için TAKE TOP yap.",
+        "Sonda öncelik kuyruğunda kalanları topla. Erken alınan bir iş, daha iyisi için yine de bırakılabilir."
+      ]
+    },
+    "bricks_ladders": {
+      "title": "Tuğlalar ve Merdivenler",
+      "story": "Bir sıra binanın üzerinde, 0. binadan başlayarak çatıdan çatıya yürüyorsun. Aşağı inmek ya da aynı yükseklikte kalmak bedava. Yukarı çıkmak ya bir merdiven ya da yükseklik farkı kadar tuğla ister. Ne kadar uzağa gidebilirsin? Ulaştığın son binanın sırasını döndür.",
+      "hints": [
+        "Merdivenleri en büyük tırmanışlara saklamak en iyisi, ama hangilerinin en büyük olduğunu ancak sonra bilirsin. Şimdiye kadar merdiven kullanan tırmanışları bir NEW MIN HEAP içinde tut.",
+        "Her tırmanışı INSERT et. IF tırmanış sayısı artık merdiven sayısından fazlaysa, bunların en küçüğü merdiven yerine tuğla kullanmalı: onu TAKE TOP ile al ve o kadar tuğlayı düş.",
+        "IF tuğlalar 0'ın altına inerse bir sonraki binaya ulaşamazsın: bulunduğun yeri RETURN et."
+      ]
+    },
+    "print_shop": {
+      "title": "Baskı Dükkânı",
+      "story": "Baskı işleri, dakikada bir sayfa basan tek yazıcılı bir dükkâna geliyor. i. iş arrive[i]. dakikada gelir ve pages[i] sayfadır; işler geliş sırasına göre listelidir. Yazıcı her boşaldığında bekleyen işlerden sayfası en az olanı, eşitlikte listede önce geleni başlatır; bekleyen yoksa bir sonraki işi bekler. İşler hangi sırayla basılır? Öncelik kuyruğu yalnızca sayı tutar; o yüzden sayfa × 1000 + işin numarasını koy: en küçüğü, sayfası en az olan iştir, eşitlikte numarası küçük olan.",
+      "hints": [
+        "Zamanı tut. Basılmamış iş varken (WHILE): önce şimdiye kadar gelmiş her işi INSERT et (sayfa TIMES 1000 PLUS numarası).",
+        "IF bekleyen yoksa (IS EMPTY) zamanı bir sonraki işin gelişine atlat. ELSE TAKE TOP yap: işin numarası bunun REMAINDER 1000'idir.",
+        "İşi sıraya APPEND et ve zamanı sayfası kadar ilerlet."
+      ]
+    },
+    "factory_codes": {
+      "title": "Fabrika Kodları",
+      "story": "Bir fabrika, 2, 3 ve 5'ten başka asal çarpanı olmayan kodlar basıyor: 1, 2, 3, 4, 5, 6, 8, 9, 10, 12 ve böyle devam eder (7 ve 14 atlanır). n. kod nedir? n 1500'e kadar çıkabilir ve kodlar yüz milyonları bulur; her sayıyı sırayla denemek çok uzun sürer. 1'den sonraki her kod, daha küçük bir kodun 2, 3 ya da 5 katıdır.",
+      "hints": [
+        "İçinde 1 olan bir NEW MIN HEAP ile başla. n kez TAKE TOP yap: alınan n. sayı cevaptır.",
+        "Her x kodunu aldığında x TIMES 2, x TIMES 3 ve x TIMES 5'i INSERT et: bunlar da koddur ve daha büyüktür.",
+        "Aynı kod iki kez üretilebilir (6, hem 2 × 3 hem 3 × 2). Konmuş kodlar için bir NEW SET tut ve bir kodu yalnızca IF küme onu NOT HAS ise INSERT et."
+      ]
+    },
+    "fuel_stops": {
+      "title": "Yakıt Molaları",
+      "story": "Bir araba target kilometre gitmeli ve fuel litre yakıtla başlıyor; kilometrede bir litre yakar. Benzin istasyonları at[i]. kilometrelerde duruyor (sıralı) ve birinde durmak gives[i] litre ekliyor. Varmak için en az kaç mola gerekir? Varamıyorsa cevap -1'dir. Nerede duracağına ancak yakıt bitince karar verirsin: o zamana kadar geçtiğin her istasyonu bilirsin.",
+      "hints": [
+        "Yakıtın yettiği kadar sür ve geçtiğin her istasyonun yakıtını bir NEW MAX HEAP'e INSERT et.",
+        "Hedefe henüz yetişemiyorsan geçtiğin en iyi istasyonda dur: TAKE TOP en çok yakıtı ekler. Molayı say.",
+        "Yakıta ihtiyacın varken IF öncelik kuyruğu IS EMPTY ise hiçbir istasyon yardım edemez: RETURN -1."
+      ]
+    },
+    "cheapest_crossing": {
+      "title": "En Ucuz Geçiş",
+      "story": "Bir tarla karelerden oluşan bir ızgara; her karenin 1'den 9'a kadar bir geçiş ücreti var. Sol üst kareden sağ alt kareye, her adımda yukarı, aşağı, sola ya da sağa bir kare giderek yürü; üzerinde durduğun her kare, ilki ve sonuncusu da, ücretini alır. En ucuz yürüyüş ne kadar tutar? Pahalı karelerin etrafından dolaşmak için yukarı ya da sola da gidebilir. r, c karesinin numarası r × cols + c'dir ve öncelik kuyruğu tek sayı tutar; o yüzden maliyet × 1000 + kare koy.",
+      "hints": [
+        "İlk kareyle bir NEW MIN HEAP başlat: ücreti × 1000 + 0. TAKE TOP her zaman şimdiye kadar bulunan en ucuz yürüyüşü verir: maliyeti sayı FLOOR DIVIDE 1000, karesi ise REMAINDER'dır.",
+        "Her kare için bir tane olmak üzere 0'lardan oluşan bir done listesi tut. Bir kare öncelik kuyruğundan ilk kez çıktığında maliyeti en ucuzdur: done'ı SET ELEMENT ile 1 yap. IF son kareyse maliyeti RETURN et.",
+        "Bir kareden dört adımı dene (1, -1, 0, 0 tutan dr ve dc listeleri işe yarar): tarlanın içindeki ve done olmayan her komşu için (maliyet PLUS ücreti) × 1000 PLUS numarasını INSERT et. Bir kare birkaç kez girebilir; yalnızca ilk çıkışı sayılır."
+      ]
+    }
+  }
+}
