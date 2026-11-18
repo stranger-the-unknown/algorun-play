@@ -17,11 +17,14 @@
         "party_tables",
         "doubling_jar",
         "digit_wheels",
+        "flag_lines",
+        "fence_posts",
         "three_planks",
         "lighthouse_bell",
         "dry_spell",
         "hill_tops",
-        "lift_trips"
+        "lift_trips",
+        "halve_or_step"
       ]
     },
     {
@@ -44,12 +47,19 @@
         "second_highest",
         "even_prefixes",
         "nested_distinct",
+        "high_water_marks",
+        "no_step_down",
+        "one_pass",
         "shelf_totals",
         "departure_board",
         "smallest_cart",
         "max_product_two",
         "balance_point",
-        "landslide"
+        "turned_belt",
+        "landslide",
+        "fence_coats",
+        "cheap_seats",
+        "next_lineup"
       ]
     },
     {
@@ -71,8 +81,12 @@
         "lonely_numbers",
         "pair_sum_count",
         "same_value_span",
+        "spy_cipher",
         "level_stretches",
-        "longest_streak"
+        "longest_streak",
+        "level_score",
+        "four_shelves",
+        "plank_wall"
       ]
     },
     {
@@ -89,11 +103,18 @@
         "matched_pair",
         "sorted_shelf",
         "recipe_steps",
+        "mirror_shelf",
         "exact_gaps",
         "pairs_under",
         "sorted_union",
+        "glove_pairs",
+        "closing_in",
+        "far_from_zero",
         "widest_basin",
-        "closest_gap"
+        "closest_gap",
+        "rod_triangles",
+        "shared_watch",
+        "after_rain"
       ]
     },
     {
@@ -113,9 +134,12 @@
         "quota_hours",
         "one_dropout",
         "calm_stretches",
+        "night_coffee",
         "market_variety",
         "peak_windows",
-        "window_variety"
+        "window_variety",
+        "both_ends",
+        "parts_aisle"
       ]
     },
     {
@@ -137,9 +161,12 @@
         "josephus_line",
         "stack_sorted",
         "plate_minimum",
+        "lone_request",
         "ticket_minutes",
         "snowball_clash",
-        "largest_billboard"
+        "smallest_ribbon",
+        "largest_billboard",
+        "cold_spells"
       ]
     },
     {
@@ -163,7 +190,9 @@
         "drop_faulty_cars",
         "kth_from_end",
         "no_repeats",
-        "loop_detector"
+        "loop_detector",
+        "two_trains",
+        "twice_read_clue"
       ]
     },
     {
@@ -185,11 +214,14 @@
         "canopy_height",
         "leaf_census",
         "lowest_leaf",
+        "shared_ancestor",
         "widest_level",
         "trail_sum",
         "sorted_grove",
         "mirror_tree",
-        "range_count"
+        "range_count",
+        "full_rows",
+        "longest_crawl"
       ]
     },
     {
@@ -247,7 +279,10 @@
         "task_order",
         "nearest_depot",
         "source_radius",
-        "ring_road"
+        "ring_road",
+        "lift_buttons",
+        "news_towns",
+        "shortest_ring"
       ]
     },
     {
@@ -267,8 +302,11 @@
         "dock_overlap",
         "leap_reach",
         "one_room",
+        "sign_flips",
         "fuel_loop",
-        "medal_row"
+        "medal_row",
+        "drum_line",
+        "playlist_cuts"
       ]
     },
     {
@@ -317,10 +355,14 @@
         "aisle_cost",
         "open_lanes",
         "best_stretch",
+        "weekly_menu",
         "exact_change",
         "diagonal_haul",
         "pack_bins",
-        "rising_line"
+        "rising_line",
+        "shared_route",
+        "square_plot",
+        "two_loads"
       ]
     },
     {
@@ -335,7 +377,36 @@
         "graph"
       ],
       "puzzles": [
+        "assembly_hours",
+        "friend_groups",
+        "festival_stage",
         "many_shortest_routes"
+      ]
+    },
+    {
+      "id": "world_15",
+      "title": "Text, Sorting & Pairs",
+      "index": 15,
+      "concepts": [
+        "text",
+        "sorting",
+        "deque",
+        "pairs"
+      ],
+      "prerequisites": [
+        "arrays"
+      ],
+      "puzzles": [
+        "letter_tally",
+        "middle_child",
+        "top_scorer",
+        "seat_label",
+        "mirror_sign",
+        "smudged_tickets",
+        "out_of_place",
+        "zigzag_queue",
+        "pass_list",
+        "two_doors"
       ]
     }
   ]
